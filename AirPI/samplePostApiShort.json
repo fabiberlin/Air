@@ -1,0 +1,1920 @@
+{
+  "devices": [
+    {
+      "address": "CC:B2:55:F4:E7:CE",
+      "loc": [
+        13.419473840732794,
+        52.520295627291695
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -64,
+          "timestamp": 1485907203695
+        },
+        {
+          "accuracy": 36,
+          "loc": [
+            13.4192765,
+            52.5203363
+          ],
+          "signalStrength": -64,
+          "timestamp": 1485907277466
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419455357026596,
+            52.52019855426251
+          ],
+          "signalStrength": -61,
+          "timestamp": 1485916980445
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -70,
+          "timestamp": 1485917005381
+        },
+        {
+          "accuracy": 12.831134796142578,
+          "loc": [
+            13.419142508440986,
+            52.520327409004544
+          ],
+          "signalStrength": -63,
+          "timestamp": 1485936721736
+        },
+        {
+          "accuracy": 22.229000091552734,
+          "loc": [
+            13.4192363,
+            52.5201985
+          ],
+          "signalStrength": -63,
+          "timestamp": 1485937038698
+        },
+        {
+          "accuracy": 53.07906723022461,
+          "loc": [
+            13.419796591048653,
+            52.520546718813534
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485981504862
+        },
+        {
+          "accuracy": 6.199334144592285,
+          "loc": [
+            13.419374252876219,
+            52.520532739904574
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485981516512
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419442556133157,
+            52.52039241427748
+          ],
+          "signalStrength": -70,
+          "timestamp": 1485981765192
+        },
+        {
+          "accuracy": 20.586999893188477,
+          "loc": [
+            13.41897,
+            52.5202716
+          ],
+          "signalStrength": -73,
+          "timestamp": 1485981782957
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.418947882535122,
+            52.52033486394603
+          ],
+          "signalStrength": -73,
+          "timestamp": 1486138973514
+        }
+      ],
+      "name": "SkyNet",
+      "security": "[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]",
+      "timestamp": 1485907203695,
+      "type": "WiFi"
+    },
+    {
+      "address": "D8:FE:E3:77:F0:C0",
+      "loc": [
+        13.419507419928546,
+        52.52021323801582
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -55,
+          "timestamp": 1485907203919
+        },
+        {
+          "accuracy": 6.862441539764404,
+          "loc": [
+            13.419495057281013,
+            52.52020262652509
+          ],
+          "signalStrength": -76,
+          "timestamp": 1485916757877
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419420556608335,
+            52.52027125235019
+          ],
+          "signalStrength": -76,
+          "timestamp": 1485916765633
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419455357026596,
+            52.52019855426251
+          ],
+          "signalStrength": -59,
+          "timestamp": 1485916980408
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -63,
+          "timestamp": 1485917005347
+        },
+        {
+          "accuracy": 12.831134796142578,
+          "loc": [
+            13.419142508440986,
+            52.520327409004544
+          ],
+          "signalStrength": -63,
+          "timestamp": 1485936721854
+        },
+        {
+          "accuracy": 37.5,
+          "loc": [
+            13.4192767,
+            52.5203364
+          ],
+          "signalStrength": -65,
+          "timestamp": 1485936966823
+        },
+        {
+          "accuracy": 22.229000091552734,
+          "loc": [
+            13.4192363,
+            52.5201985
+          ],
+          "signalStrength": -65,
+          "timestamp": 1485937038808
+        },
+        {
+          "accuracy": 20.586999893188477,
+          "loc": [
+            13.41897,
+            52.5202716
+          ],
+          "signalStrength": -59,
+          "timestamp": 1485981782990
+        }
+      ],
+      "name": "dlink",
+      "security": "[WPA-PSK-CCMP][WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485907203919,
+      "type": "WiFi"
+    },
+    {
+      "address": "D0:05:2A:16:19:33",
+      "loc": [
+        13.41946754564116,
+        52.52026109715939
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -77,
+          "timestamp": 1485907204051
+        },
+        {
+          "accuracy": 5.664878845214844,
+          "loc": [
+            13.419314471298073,
+            52.52012348085732
+          ],
+          "signalStrength": -86,
+          "timestamp": 1485916593380
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419455357026596,
+            52.52019855426251
+          ],
+          "signalStrength": -71,
+          "timestamp": 1485916980474
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -63,
+          "timestamp": 1485917005412
+        },
+        {
+          "accuracy": 12.831134796142578,
+          "loc": [
+            13.419142508440986,
+            52.520327409004544
+          ],
+          "signalStrength": -61,
+          "timestamp": 1485936721883
+        },
+        {
+          "accuracy": 37.5,
+          "loc": [
+            13.4192767,
+            52.5203364
+          ],
+          "signalStrength": -60,
+          "timestamp": 1485936966862
+        },
+        {
+          "accuracy": 22.229000091552734,
+          "loc": [
+            13.4192363,
+            52.5201985
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485937038849
+        },
+        {
+          "accuracy": 6.252185344696045,
+          "loc": [
+            13.419370996742867,
+            52.52053151745524
+          ],
+          "signalStrength": -80,
+          "timestamp": 1485981517626
+        },
+        {
+          "accuracy": 6.486464500427246,
+          "loc": [
+            13.419338822903082,
+            52.520510710014335
+          ],
+          "signalStrength": -80,
+          "timestamp": 1485981519646
+        },
+        {
+          "accuracy": 20.586999893188477,
+          "loc": [
+            13.41897,
+            52.5202716
+          ],
+          "signalStrength": -64,
+          "timestamp": 1485981783032
+        }
+      ],
+      "name": "WLAN-417135",
+      "security": "[WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485907204051,
+      "type": "WiFi"
+    },
+    {
+      "address": "D4:21:22:95:AB:3B",
+      "loc": [
+        13.419346544258092,
+        52.520288108345085
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -73,
+          "timestamp": 1485907204145
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419455357026596,
+            52.52019855426251
+          ],
+          "signalStrength": -84,
+          "timestamp": 1485916980564
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -86,
+          "timestamp": 1485917005557
+        },
+        {
+          "accuracy": 12.831134796142578,
+          "loc": [
+            13.419142508440986,
+            52.520327409004544
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485936721912
+        },
+        {
+          "accuracy": 37.5,
+          "loc": [
+            13.4192767,
+            52.5203364
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485936966935
+        },
+        {
+          "accuracy": 22.229000091552734,
+          "loc": [
+            13.4192363,
+            52.5201985
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485937038936
+        },
+        {
+          "accuracy": 6.155422210693359,
+          "loc": [
+            13.419357029838055,
+            52.52052277754649
+          ],
+          "signalStrength": -87,
+          "timestamp": 1485981518517
+        },
+        {
+          "accuracy": 8.030542373657227,
+          "loc": [
+            13.41929605564486,
+            52.52049380918388
+          ],
+          "signalStrength": -87,
+          "timestamp": 1485981524628
+        },
+        {
+          "accuracy": 6.73974609375,
+          "loc": [
+            13.41863155739686,
+            52.52026807271201
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485981683304
+        },
+        {
+          "accuracy": 8.045350074768066,
+          "loc": [
+            13.418780166616582,
+            52.52033496315417
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485981690163
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419442556133157,
+            52.52039241427748
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485981756646
+        },
+        {
+          "accuracy": 20.586999893188477,
+          "loc": [
+            13.41897,
+            52.5202716
+          ],
+          "signalStrength": -83,
+          "timestamp": 1485981782878
+        }
+      ],
+      "name": "WLAN-830371",
+      "security": "[WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485907204145,
+      "type": "WiFi"
+    },
+    {
+      "address": "D4:21:22:95:AB:3C",
+      "loc": [
+        13.419462963518802,
+        52.520296436996524
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -76,
+          "timestamp": 1485907204240
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419455357026596,
+            52.52019855426251
+          ],
+          "signalStrength": -84,
+          "timestamp": 1485916980594
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485917005588
+        },
+        {
+          "accuracy": 12.831134796142578,
+          "loc": [
+            13.419142508440986,
+            52.520327409004544
+          ],
+          "signalStrength": -86,
+          "timestamp": 1485936721941
+        },
+        {
+          "accuracy": 37.5,
+          "loc": [
+            13.4192767,
+            52.5203364
+          ],
+          "signalStrength": -90,
+          "timestamp": 1485936967007
+        },
+        {
+          "accuracy": 22.229000091552734,
+          "loc": [
+            13.4192363,
+            52.5201985
+          ],
+          "signalStrength": -87,
+          "timestamp": 1485937038974
+        },
+        {
+          "accuracy": 6.155422210693359,
+          "loc": [
+            13.419357029838055,
+            52.52052277754649
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485981518593
+        },
+        {
+          "accuracy": 6.806878566741943,
+          "loc": [
+            13.419325384237531,
+            52.5205025199678
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485981520248
+        },
+        {
+          "accuracy": 8.030542373657227,
+          "loc": [
+            13.41929605564486,
+            52.52049380918388
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485981524748
+        },
+        {
+          "accuracy": 20.586999893188477,
+          "loc": [
+            13.41897,
+            52.5202716
+          ],
+          "signalStrength": -83,
+          "timestamp": 1485981783239
+        }
+      ],
+      "name": "Telekom_FON",
+      "security": "[ESS]",
+      "timestamp": 1485907204240,
+      "type": "WiFi"
+    },
+    {
+      "address": "C8:D3:A3:1B:BD:32",
+      "loc": [
+        13.419530565465958,
+        52.52023941388645
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485907204310
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419455357026596,
+            52.52019855426251
+          ],
+          "signalStrength": -83,
+          "timestamp": 1485916980533
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -83,
+          "timestamp": 1485917005476
+        },
+        {
+          "accuracy": 37.5,
+          "loc": [
+            13.4192767,
+            52.5203364
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485936966898
+        },
+        {
+          "accuracy": 22.229000091552734,
+          "loc": [
+            13.4192363,
+            52.5201985
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485937039011
+        },
+        {
+          "accuracy": 20.586999893188477,
+          "loc": [
+            13.41897,
+            52.5202716
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485981783135
+        },
+        {
+          "accuracy": 22.73726463317871,
+          "loc": [
+            13.419805566701074,
+            52.520606156829125
+          ],
+          "signalStrength": -85,
+          "timestamp": 1486253650633
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4189303,
+            52.5201913
+          ],
+          "signalStrength": -85,
+          "timestamp": 1486253659491
+        }
+      ],
+      "name": "sanitu",
+      "security": "[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][WPS][ESS]",
+      "timestamp": 1485907204310,
+      "type": "WiFi"
+    },
+    {
+      "address": "C8:0E:14:69:D5:90",
+      "loc": [
+        13.41982113650148,
+        52.52017978612263
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -89,
+          "timestamp": 1485907204419
+        },
+        {
+          "accuracy": 5.08731746673584,
+          "loc": [
+            13.419729516339999,
+            52.520259821362224
+          ],
+          "signalStrength": -91,
+          "timestamp": 1485916661744
+        },
+        {
+          "accuracy": 5.993962287902832,
+          "loc": [
+            13.419901938043981,
+            52.52024827647026
+          ],
+          "signalStrength": -84,
+          "timestamp": 1485916670806
+        },
+        {
+          "accuracy": 6.349689483642578,
+          "loc": [
+            13.419982978678101,
+            52.520220234854804
+          ],
+          "signalStrength": -84,
+          "timestamp": 1485916675825
+        },
+        {
+          "accuracy": 6.5478596687316895,
+          "loc": [
+            13.420038273069938,
+            52.52022206344768
+          ],
+          "signalStrength": -84,
+          "timestamp": 1485916679496
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.420355853472763,
+            52.52026126259001
+          ],
+          "signalStrength": -84,
+          "timestamp": 1485916695046
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.420004157838687,
+            52.52005595185509
+          ],
+          "signalStrength": -92,
+          "timestamp": 1485916720356
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419931824019965,
+            52.52007077320809
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485916726988
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419901822575898,
+            52.52008191105965
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485916729359
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419766906754253,
+            52.52014416019481
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485916738328
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419708547995965,
+            52.52014411038188
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485916741995
+        },
+        {
+          "accuracy": 5.003183364868164,
+          "loc": [
+            13.419648923226154,
+            52.52018086935787
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485916747373
+        },
+        {
+          "accuracy": 6.620230197906494,
+          "loc": [
+            13.419505132503526,
+            52.52020258481174
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485916756297
+        }
+      ],
+      "name": "dlink",
+      "security": "[WPA-PSK-TKIP][WPA2-PSK-CCMP][ESS]",
+      "timestamp": 1485907204419,
+      "type": "WiFi"
+    },
+    {
+      "address": "5C:DC:96:A8:65:01",
+      "loc": [
+        13.41943796519271,
+        52.520228636249456
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -92,
+          "timestamp": 1485907204677
+        },
+        {
+          "accuracy": 5.09834623336792,
+          "loc": [
+            13.41963734688149,
+            52.52019546612253
+          ],
+          "signalStrength": -73,
+          "timestamp": 1485916748430
+        },
+        {
+          "accuracy": 6.862441539764404,
+          "loc": [
+            13.419495057281013,
+            52.52020262652509
+          ],
+          "signalStrength": -70,
+          "timestamp": 1485916756838
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419420556608335,
+            52.52027125235019
+          ],
+          "signalStrength": -75,
+          "timestamp": 1485916765485
+        }
+      ],
+      "name": "the matrix",
+      "security": "[WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485907204677,
+      "type": "WiFi"
+    },
+    {
+      "address": "5C:DC:96:A8:65:02",
+      "loc": [
+        13.41943796519271,
+        52.520228636249456
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -93,
+          "timestamp": 1485907204724
+        },
+        {
+          "accuracy": 5.09834623336792,
+          "loc": [
+            13.41963734688149,
+            52.52019546612253
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485916748588
+        },
+        {
+          "accuracy": 6.862441539764404,
+          "loc": [
+            13.419495057281013,
+            52.52020262652509
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485916757802
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419420556608335,
+            52.52027125235019
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485916765526
+        }
+      ],
+      "name": "Telekom_FON",
+      "security": "[ESS]",
+      "timestamp": 1485907204724,
+      "type": "WiFi"
+    },
+    {
+      "address": "DE:53:7C:8E:D4:8F",
+      "loc": [
+        13.42028515,
+        52.5200564
+      ],
+      "locations": [
+        {
+          "accuracy": 20.749000549316406,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -89,
+          "timestamp": 1485907205762
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -90,
+          "timestamp": 1485917005618
+        }
+      ],
+      "name": "Tele Columbus",
+      "security": "[WPA-EAP-CCMP][WPA2-EAP-CCMP][ESS]",
+      "timestamp": 1485907205762,
+      "type": "WiFi"
+    },
+    {
+      "address": "62:E3:27:C8:6D:3E",
+      "loc": [
+        13.419268820709569,
+        52.52030186566889
+      ],
+      "locations": [
+        {
+          "accuracy": 20.531999588012695,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485907214840
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419993793517323,
+            52.52004951202132
+          ],
+          "signalStrength": -90,
+          "timestamp": 1485916720858
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419931824019965,
+            52.52007077320809
+          ],
+          "signalStrength": -90,
+          "timestamp": 1485916727181
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419901822575898,
+            52.52008191105965
+          ],
+          "signalStrength": -90,
+          "timestamp": 1485916729633
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419766906754253,
+            52.52014416019481
+          ],
+          "signalStrength": -90,
+          "timestamp": 1485916738599
+        },
+        {
+          "accuracy": 6.862441539764404,
+          "loc": [
+            13.419495057281013,
+            52.52020262652509
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485916758006
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.419418589529846,
+            52.52027669485946
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485916765801
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -92,
+          "timestamp": 1485936795852
+        },
+        {
+          "accuracy": 36,
+          "loc": [
+            13.4192768,
+            52.5203364
+          ],
+          "signalStrength": -89,
+          "timestamp": 1485938046806
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.418289857326682,
+            52.52062201084814
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485981636933
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.418345973289503,
+            52.520585327212245
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485981641094
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.418404990628558,
+            52.52057303343845
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485981645482
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.418448668000055,
+            52.5205336737318
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485981655078
+        },
+        {
+          "accuracy": 5.029608249664307,
+          "loc": [
+            13.418439889409587,
+            52.52043108098608
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485981663344
+        },
+        {
+          "accuracy": 5.493957996368408,
+          "loc": [
+            13.418549613028908,
+            52.52031425545697
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485981674149
+        },
+        {
+          "accuracy": 22.73726463317871,
+          "loc": [
+            13.419805566701074,
+            52.520606156829125
+          ],
+          "signalStrength": -91,
+          "timestamp": 1486253650680
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4189303,
+            52.5201913
+          ],
+          "signalStrength": -91,
+          "timestamp": 1486253659574
+        }
+      ],
+      "name": "TP-LINK_6D3E",
+      "security": "[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]",
+      "timestamp": 1485907214840,
+      "type": "WiFi"
+    },
+    {
+      "address": "00:04:0E:3B:96:76",
+      "loc": [
+        13.419530565465958,
+        52.52023941388645
+      ],
+      "locations": [
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4191989,
+            52.5202452
+          ],
+          "signalStrength": -87,
+          "timestamp": 1485907223850
+        },
+        {
+          "accuracy": 60,
+          "loc": [
+            13.419455357026596,
+            52.52019855426251
+          ],
+          "signalStrength": -84,
+          "timestamp": 1485916979383
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4213714,
+            52.5198676
+          ],
+          "signalStrength": -85,
+          "timestamp": 1485917005219
+        },
+        {
+          "accuracy": 37.5,
+          "loc": [
+            13.4192767,
+            52.5203364
+          ],
+          "signalStrength": -89,
+          "timestamp": 1485936966970
+        },
+        {
+          "accuracy": 22.229000091552734,
+          "loc": [
+            13.4192363,
+            52.5201985
+          ],
+          "signalStrength": -89,
+          "timestamp": 1485937038885
+        },
+        {
+          "accuracy": 20.586999893188477,
+          "loc": [
+            13.41897,
+            52.5202716
+          ],
+          "signalStrength": -86,
+          "timestamp": 1485981783188
+        },
+        {
+          "accuracy": 22.73726463317871,
+          "loc": [
+            13.419805566701074,
+            52.520606156829125
+          ],
+          "signalStrength": -83,
+          "timestamp": 1486253650728
+        },
+        {
+          "accuracy": 50,
+          "loc": [
+            13.4189303,
+            52.5201913
+          ],
+          "signalStrength": -83,
+          "timestamp": 1486253659625
+        }
+      ],
+      "name": "FRITZ!Box SL WLAN",
+      "security": "[WEP][ESS]",
+      "timestamp": 1485907223850,
+      "type": "WiFi"
+    },
+    {
+      "address": "5C:49:79:97:73:E3",
+      "loc": [
+        13.517382718709793,
+        52.46152404925038
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958035583
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958039428
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958048398
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518456718559671,
+            52.46127421493679
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958050051
+        }
+      ],
+      "name": "RechtsanGST",
+      "security": "[WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485958035583,
+      "type": "WiFi"
+    },
+    {
+      "address": "DE:53:7C:EC:3C:CE",
+      "loc": [
+        13.517382718709793,
+        52.46152404925038
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958035680
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958039477
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958048450
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518456718559671,
+            52.46127421493679
+          ],
+          "signalStrength": -78,
+          "timestamp": 1485958050129
+        }
+      ],
+      "name": "Tele Columbus",
+      "security": "[WPA-EAP-CCMP][WPA2-EAP-CCMP][ESS]",
+      "timestamp": 1485958035680,
+      "type": "WiFi"
+    },
+    {
+      "address": "DC:53:7C:EC:3C:C7",
+      "loc": [
+        13.51722038999953,
+        52.4616489374662
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485958035724
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485958039512
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485958048491
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518456718559671,
+            52.46127421493679
+          ],
+          "signalStrength": -79,
+          "timestamp": 1485958050169
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516336331761257,
+            52.4619462994148
+          ],
+          "signalStrength": -82,
+          "timestamp": 1486459837563
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51709801339581,
+            52.46176900331328
+          ],
+          "signalStrength": -82,
+          "timestamp": 1486459841602
+        },
+        {
+          "accuracy": 25.542999267578125,
+          "loc": [
+            13.5161051,
+            52.4619463
+          ],
+          "signalStrength": -82,
+          "timestamp": 1486459850685
+        },
+        {
+          "accuracy": 20.75,
+          "loc": [
+            13.5186928,
+            52.4614337
+          ],
+          "signalStrength": -82,
+          "timestamp": 1486459861064
+        }
+      ],
+      "name": "Finger weg ihr Luschen",
+      "security": "[WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485958035724,
+      "type": "WiFi"
+    },
+    {
+      "address": "B4:A5:EF:7A:F8:BC",
+      "loc": [
+        13.517382718709793,
+        52.46152404925038
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -80,
+          "timestamp": 1485958035794
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -80,
+          "timestamp": 1485958039552
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -80,
+          "timestamp": 1485958048540
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518456718559671,
+            52.46127421493679
+          ],
+          "signalStrength": -80,
+          "timestamp": 1485958050233
+        }
+      ],
+      "name": "EasyBox-456224",
+      "security": "[WPA-PSK-CCMP+TKIP][WPA2-PSK-CCMP+TKIP][ESS]",
+      "timestamp": 1485958035794,
+      "type": "WiFi"
+    },
+    {
+      "address": "C0:25:06:69:7B:F9",
+      "loc": [
+        13.517413154953068,
+        52.46160345692343
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485958035852
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485958039594
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485958048579
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518624123326138,
+            52.46124134369876
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485958050951
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516336331761257,
+            52.4619462994148
+          ],
+          "signalStrength": -75,
+          "timestamp": 1486459837321
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51709801339581,
+            52.46176900331328
+          ],
+          "signalStrength": -75,
+          "timestamp": 1486459841447
+        },
+        {
+          "accuracy": 25.542999267578125,
+          "loc": [
+            13.5161051,
+            52.4619463
+          ],
+          "signalStrength": -75,
+          "timestamp": 1486459850469
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.520067514861841,
+            52.46110272689584
+          ],
+          "signalStrength": -75,
+          "timestamp": 1486459860710
+        }
+      ],
+      "name": "FRITZ!Box 7330 SL",
+      "security": "[WPA-PSK-TKIP][WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485958035852,
+      "type": "WiFi"
+    },
+    {
+      "address": "FC:3F:7C:5B:2C:B4",
+      "loc": [
+        13.517424569901412,
+        52.46151583144087
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958035899
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958039652
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958048664
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518624123326138,
+            52.46124134369876
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958050993
+        }
+      ],
+      "name": "WLAN-XMR6BR",
+      "security": "[WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485958035899,
+      "type": "WiFi"
+    },
+    {
+      "address": "9C:C7:A6:FB:DF:7D",
+      "loc": [
+        13.517424569901412,
+        52.46151583144087
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958036123
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958039688
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958048712
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518624123326138,
+            52.46124134369876
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958051049
+        }
+      ],
+      "name": "AKD",
+      "security": "[WPA2-PSK-CCMP][WPS][ESS]",
+      "timestamp": 1485958036123,
+      "type": "WiFi"
+    },
+    {
+      "address": "BC:05:43:E3:88:2D",
+      "loc": [
+        13.517424569901412,
+        52.46151583144087
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.516116570576735,
+            52.46180865904406
+          ],
+          "signalStrength": -87,
+          "timestamp": 1485958036177
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485958039721
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485958048753
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518624123326138,
+            52.46124134369876
+          ],
+          "signalStrength": -81,
+          "timestamp": 1485958051103
+        }
+      ],
+      "name": "Goofy-Home",
+      "security": "[WPA-PSK-TKIP][WPA2-PSK-CCMP][ESS]",
+      "timestamp": 1485958036177,
+      "type": "WiFi"
+    },
+    {
+      "address": "D0:03:4B:D5:2F:B8",
+      "loc": [
+        13.517860569676303,
+        52.46141822223981
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.51667546252172,
+            52.461700697062696
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485958039763
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485958048801
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518624123326138,
+            52.46124134369876
+          ],
+          "signalStrength": -82,
+          "timestamp": 1485958051141
+        }
+      ],
+      "name": "Axels WLAN-Netzwerk",
+      "security": "[WPA2-PSK-CCMP][ESS]",
+      "timestamp": 1485958039763,
+      "type": "WiFi"
+    },
+    {
+      "address": "68:12:60:80:5A:43",
+      "loc": [
+        13.518575091147104,
+        52.46135335968312
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518282123181054,
+            52.46131262595795
+          ],
+          "signalStrength": -92,
+          "timestamp": 1485958048880
+        },
+        {
+          "accuracy": 6.797636985778809,
+          "loc": [
+            13.518785195135544,
+            52.461357519476984
+          ],
+          "signalStrength": -88,
+          "timestamp": 1485958646441
+        },
+        {
+          "accuracy": 6.716254711151123,
+          "loc": [
+            13.518657955124716,
+            52.46138993361442
+          ],
+          "signalStrength": -91,
+          "timestamp": 1485958647685
+        }
+      ],
+      "name": "N/A",
+      "security": "N/A",
+      "timestamp": 1485958048880,
+      "type": "BtLe"
+    },
+    {
+      "address": "E4:E0:C5:3A:6F:AF",
+      "loc": [
+        13.518999893808413,
+        52.461246299523395
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518790761534195,
+            52.46120431642218
+          ],
+          "signalStrength": -90,
+          "timestamp": 1485958051939
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.5192979654668,
+            52.46122105433838
+          ],
+          "signalStrength": -94,
+          "timestamp": 1485958642159
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518910954424243,
+            52.461313527809615
+          ],
+          "signalStrength": -95,
+          "timestamp": 1486118902887
+        }
+      ],
+      "name": "DTVBluetooth",
+      "security": "N/A",
+      "timestamp": 1485958051939,
+      "type": "BtEdr"
+    },
+    {
+      "address": "45:3F:57:73:54:D9",
+      "loc": [
+        13.518943547081163,
+        52.46116830473316
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.518943547081163,
+            52.46116830473316
+          ],
+          "signalStrength": -92,
+          "timestamp": 1485958053292
+        }
+      ],
+      "name": "N/A",
+      "security": "N/A",
+      "timestamp": 1485958053292,
+      "type": "BtLe"
+    },
+    {
+      "address": "A4:D1:8C:6D:03:1E",
+      "loc": [
+        13.519268323677917,
+        52.461202598909665
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.519239276069804,
+            52.461103344052866
+          ],
+          "signalStrength": -93,
+          "timestamp": 1485958055209
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.519534330298175,
+            52.46113486873518
+          ],
+          "signalStrength": -92,
+          "timestamp": 1485958639810
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.519068032310974,
+            52.461268321717114
+          ],
+          "signalStrength": -91,
+          "timestamp": 1486118903366
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.519231656032714,
+            52.461303861133516
+          ],
+          "signalStrength": -94,
+          "timestamp": 1486459853643
+        }
+      ],
+      "name": "N/A",
+      "security": "N/A",
+      "timestamp": 1485958055209,
+      "type": "BtEdr"
+    },
+    {
+      "address": "B0:5A:DA:90:5D:6F",
+      "loc": [
+        13.428868329951882,
+        52.51243463920359
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.418895652959762,
+            52.515062024808955
+          ],
+          "signalStrength": -87,
+          "timestamp": 1486491669885
+        },
+        {
+          "accuracy": 27.104000091552734,
+          "loc": [
+            13.4195302,
+            52.5152847
+          ],
+          "signalStrength": -87,
+          "timestamp": 1486491672219
+        },
+        {
+          "accuracy": 699.9990234375,
+          "loc": [
+            13.4673587,
+            52.5010652
+          ],
+          "signalStrength": -87,
+          "timestamp": 1486491681560
+        },
+        {
+          "accuracy": 5,
+          "loc": [
+            13.41898259679965,
+            52.515142171208986
+          ],
+          "signalStrength": -87,
+          "timestamp": 1486491686618
+        },
+        {
+          "accuracy": 26.047000885009766,
+          "loc": [
+            13.4195745,
+            52.5156191
+          ],
+          "signalStrength": -89,
+          "timestamp": 1486491698622
+        }
+      ],
+      "name": "HP-Print-6F-Officejet Pro 8610",
+      "security": "[ESS]",
+      "timestamp": 1486491669885,
+      "type": "WiFi"
+    },
+    {
+      "address": "68:25:F4:89:93:B6",
+      "loc": [
+        13.418977759928644,
+        52.51513958865972
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.418977759928644,
+            52.51513958865972
+          ],
+          "signalStrength": -89,
+          "timestamp": 1486491675779
+        }
+      ],
+      "name": "N/A",
+      "security": "N/A",
+      "timestamp": 1486491675779,
+      "type": "BtLe"
+    },
+    {
+      "address": "74:FE:28:C8:CD:66",
+      "loc": [
+        13.443170648399825,
+        52.508103685604496
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.41898259679965,
+            52.515142171208986
+          ],
+          "signalStrength": -92,
+          "timestamp": 1486491679313
+        },
+        {
+          "accuracy": 699.9990234375,
+          "loc": [
+            13.4673587,
+            52.5010652
+          ],
+          "signalStrength": -83,
+          "timestamp": 1486491681697
+        }
+      ],
+      "name": "N/A",
+      "security": "N/A",
+      "timestamp": 1486491679313,
+      "type": "BtLe"
+    },
+    {
+      "address": "56:4D:97:AE:6A:70",
+      "loc": [
+        13.41898259679965,
+        52.515142171208986
+      ],
+      "locations": [
+        {
+          "accuracy": 5,
+          "loc": [
+            13.41898259679965,
+            52.515142171208986
+          ],
+          "signalStrength": -95,
+          "timestamp": 1486491693178
+        }
+      ],
+      "name": "N/A",
+      "security": "N/A",
+      "timestamp": 1486491693178,
+      "type": "BtEdr"
+    }
+  ]
+}
