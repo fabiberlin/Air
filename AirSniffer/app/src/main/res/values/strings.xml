@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AirSniffer</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_maps_for_key">Map</string>
+
+    <string name="title_activity_lock_screen">LockScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

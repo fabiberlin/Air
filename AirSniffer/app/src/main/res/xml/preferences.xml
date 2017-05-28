@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Sniffing">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="WiFi"
+            android:key="check_box_preference_wifi" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="Bluetooth EDR"
+            android:key="check_box_preference_bt_edr" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="Bluetooth LE"
+            android:key="check_box_preference_bt_le" />
+        <EditTextPreference
+            android:defaultValue="5000"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Scan Intervall"
+            android:key="edit_text_preference_scan_intervall" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="API Settings">
+
+        <EditTextPreference
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Api Url"
+            android:key="edit_text_preference_api_base"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

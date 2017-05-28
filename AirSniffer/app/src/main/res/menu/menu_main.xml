@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".lifecycle.MainActivity">
+
+    <item android:title="Map"
+        android:id="@+id/action_show_all_devices_on_map"
+        android:icon="@drawable/map"
+        app:showAsAction="always"
+        />
+    <item android:title="Refresh"
+        android:id="@+id/menu_item_refresh"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/refresh" />
+    <item android:id="@+id/menu_service_checkbox"
+        android:title="Sniff"
+        android:checkable="true"
+        app:showAsAction="collapseActionView" />
+    <item android:title="Lock Screen"
+        android:id="@+id/action_lock_screen"
+        />
+    <item android:title="Upload to Cloud"
+        android:id="@+id/menu_item_upload"
+        android:icon="@drawable/cloud"
+        app:showAsAction="ifRoom" />
+    <item android:title="Db Stats"
+        android:id="@+id/menu_dbStats"
+        app:showAsAction="ifRoom" />
+    <item android:title="Dump Data"
+        android:id="@+id/menu_dump_data"
+        app:showAsAction="ifRoom" />
+    <item android:title="Settings"
+        android:id="@+id/menu_settings"
+        app:showAsAction="ifRoom" />
+
+</menu>

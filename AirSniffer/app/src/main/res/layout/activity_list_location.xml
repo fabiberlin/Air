@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.baensch.airsniffer.lifecycle.ListLocationActivity">
+
+    <RelativeLayout
+        android:id="@+id/locations_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView_device_detail_header"
+            android:text="Some Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:text="First Seen: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_device_detail_header"
+            android:id="@+id/textView_device_detail_label_timestamp" />
+
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_device_detail_label_timestamp"
+            android:id="@+id/textView_device_detail_value_timestamp"
+            android:layout_toEndOf="@+id/textView_device_detail_label_timestamp" />
+
+
+        <TextView
+            android:text="Longitude: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_device_detail_label_timestamp"
+            android:id="@+id/textView_device_detail_label_longitude" />
+
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_device_detail_label_longitude"
+            android:id="@+id/textView_device_detail_value_longitudee"
+            android:layout_toEndOf="@+id/textView_device_detail_label_longitude" />
+
+        <TextView
+            android:text="Latitude: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_device_detail_label_longitude"
+            android:id="@+id/textView_device_detail_label_latitude" />
+
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_device_detail_label_latitude"
+            android:id="@+id/textView_device_detail_value_latitude"
+            android:layout_toEndOf="@+id/textView_device_detail_label_latitude" />
+
+        <TextView
+            android:text="Radius: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_device_detail_label_latitude"
+            android:id="@+id/textView_device_detail_label_radius" />
+
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_device_detail_label_radius"
+            android:id="@+id/textView_device_detail_value_radius"
+            android:layout_toEndOf="@+id/textView_device_detail_label_radius" />
+
+        <TextView
+            android:text="Number Of Locations: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_device_detail_label_radius"
+            android:id="@+id/textView_device_detail_label_num_Locations" />
+
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_device_detail_label_num_Locations"
+            android:id="@+id/textView_device_detail_value_num_Location"
+            android:layout_toEndOf="@+id/textView_device_detail_label_num_Locations" />
+
+        <TextView
+            android:text="Security: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_device_detail_label_num_Locations"
+            android:id="@+id/textView_device_detail_label_security" />
+
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_device_detail_label_security"
+            android:id="@+id/textView_device_detail_value_security"
+            android:layout_toEndOf="@+id/textView_device_detail_label_security" />
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/locations_relative_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <ListView
+                android:id="@+id/listView_locations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:transcriptMode="alwaysScroll"
+                android:stackFromBottom="false"
+                android:fastScrollEnabled="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+            </ListView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
