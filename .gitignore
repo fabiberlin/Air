@@ -33,3 +33,7 @@ captures/
 
 .idea/
 *iml
+
+AirLocator/app/src/release/res/values/google_maps_api\.xml
+
+AirSniffer/app/src/release/res/values/google_maps_api\.xml
