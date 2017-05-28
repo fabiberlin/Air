@@ -37,3 +37,9 @@ captures/
 AirLocator/app/src/release/res/values/google_maps_api\.xml
 
 AirSniffer/app/src/release/res/values/google_maps_api\.xml
+
+AirLocator/app/src/debug/res/values/google_maps_api\.xml
+
+AirLocator/app/src/main/java/baensch/de/airlocator/API\.java
+
+AirSniffer/app/src/main/java/de/baensch/airsniffer/util/API\.java
