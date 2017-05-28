@@ -43,3 +43,13 @@ AirLocator/app/src/debug/res/values/google_maps_api\.xml
 AirLocator/app/src/main/java/baensch/de/airlocator/API\.java
 
 AirSniffer/app/src/main/java/de/baensch/airsniffer/util/API\.java
+
+AirPI/api_prefs\.py
+
+AirPI/testing/
+
+AirPI/api_prefs\.pyc
+
+AirSniffer/app/src/debug/res/values/google_maps_api\.xml
+
+AirVis/api\.js
