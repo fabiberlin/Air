@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-slider.css">
+    <link rel="stylesheet" href="maps.css">
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/bootstrap-slider.js"></script>
+    <script src="device.js"></script>
+    <script src="deviceList.js"></script>
+    <script src="Location.js"></script>
+    <script src="discoveredLocations.js"></script>
+    <script src="filter.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="lib/js/bootstrap-checkbox.min.js" defer></script>
+    <script src="status.js"></script>
+    <script src="api.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="first">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Filter</div>
+            <div class="panel-body">
+                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="search_input">
+                <label style="margin-right: 10pt"># Locations</label>
+                <input id="sliderRangeNumLocations" type="text" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="[1,100]"/>
+                <br>
+                <label style="margin-right: 10pt">Radius</label>
+                <input id="sliderRangRadius" type="text" class="span2" value="" data-slider-min="1" data-slider-max="200" data-slider-step="1" data-slider-value="[1,200]"/>
+                <br>
+                <input id="checkBoxWiFi" type="checkbox" checked>
+                <label>WiFi</label>
+                <br>
+                <input id="checkBoxFreeWiFiOnly" type="checkbox">
+                <label>Free WiFi Only</label>
+                <br>
+                <input id="checkBoxBlEdr" type="checkbox" checked>
+                <label>BL EDR</label>
+                <br>
+                <input id="checkBoxBlLe" type="checkbox" checked>
+                <label>BL LE</label>
+                <br>
+                <button id="buttonResetFilter" type="button" class="btn btn-default">Reset</button>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Status</div>
+            <div class="panel-body">
+                <label>DB Device Count:</label>
+                <label id="statusDeviceCount">N/A</label>
+                <br>
+                <label>DB Location Count:</label>
+                <label id="statusLocationCount">N/A</label>
+                <br>
+                <label>Request Device Count:</label>
+                <label id="statusRequestDeviceCount">N/A</label>
+                <br>
+                <label>Request Time DB:</label>
+                <label id="statusRequestTimeDB">N/A</label>
+                <label>ms</label>
+            </div>
+        </div>
+
+    </div>
+    <div id="second">
+        <div id="map"></div>
+    </div>
+</div>
+
+<script src="sniffer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4MYInvJgnnAcroY5jtNHl_Rk2XX1Tj70&callback=initMap">
+</script>
+</body>
+</html>
