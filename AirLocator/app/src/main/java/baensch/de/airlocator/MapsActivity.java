@@ -109,7 +109,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     int numNetworks = msg.getData().getInt(WiFiSniffer.EXTRA_NUM_OF_NETWORKS);
                     if (d) Log.d(TAG, "Callback - " + longitude + " " + latitude);
 
-                    Toast.makeText(getApplicationContext(), "DB Response Time: " + time + "\nNum of networks: "+numNetworks, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "DB Response Time: " + time + " ms\n# Networks: "+numNetworks, Toast.LENGTH_SHORT).show();
 
                     LatLng myPosition = new LatLng(longitude, latitude);
 
@@ -136,7 +136,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     break;
 
                 case WiFiSniffer.CODE_FAIL:
-
+                    Toast.makeText(getApplicationContext(), "Error - "+msg.getData().getString(WiFiSniffer.EXTRA_FAILMESSAGE), Toast.LENGTH_SHORT).show();
                     break;
             }
         }

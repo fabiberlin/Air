@@ -130,8 +130,13 @@ public class WiFiSniffer {
                 httpResult = httpPost(API.URL, API.USER, API.KEY, data.toString(), headers, 120000);
                 if (d) Log.d(TAG, "Result Statuscode "+httpResult.getStatusCode());
 
+                if (httpResult.getStatusCode() == 400){
+                    sendErrorToGui("AirPI has no entries. Use the AirSniffer to enhance the coverage!");
+                    return null;
+                }
                 if (httpResult.getStatusCode() != 200){
-                    if (d) Log.d(TAG, "Sorry Dude, either not found or you forget to send your wifi networks");
+                    if (d) Log.d(TAG, "Sorry dude, you forget to send your wifi networks or the AirPI is down.");
+                    sendErrorToGui("Sorry dude, you forget to send your wifi networks or the AirPI is down.");
                     return null;
                 }
 
@@ -143,6 +148,7 @@ public class WiFiSniffer {
 
             } catch (IOException e) {
                 e.printStackTrace();
+                sendErrorToGui("Something went wrong");
                 return null;
             }
 
@@ -169,10 +175,19 @@ public class WiFiSniffer {
 
             } catch (JSONException e) {
                 e.printStackTrace();
+                sendErrorToGui("Something went wrong");
             }
 
             return null;
         }
+    }
+
+    void sendErrorToGui(String error){
+        Message msg = handler.obtainMessage(CODE_FAIL);
+        Bundle bundle =  new Bundle();
+        bundle.putString(EXTRA_FAILMESSAGE, error);
+        msg.setData(bundle);
+        handler.sendMessage(msg);
     }
 
     private JSONObject prepareJson() {
@@ -255,6 +270,7 @@ public class WiFiSniffer {
         catch(IOException exception)
         {
             inputStream = conn.getErrorStream();
+            sendErrorToGui("Something went wrong");
         }
 
         HttpResultHelper result = new HttpResultHelper();
