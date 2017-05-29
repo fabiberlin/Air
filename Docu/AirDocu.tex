@@ -236,8 +236,9 @@ GET     /devicesAtRect
 GET     /device
 GET     /status
 GET     /alive
-GET     /location
+POST    /location
 \end{lstlisting}
+%TODO Change to GETs
 
 Die MongoDB Datenbank ist eine Dokumentbasierte Datenbank. Daher kann die relationale Datenbank aus Android nicht einfach auf diese gemappt werden. Stattdessen ist nun die ''Locations'' Tabelle, welche via Fremdschlüssel angesprochen wurde, direkt als Set im ''Device'' Modell enthalten. Dies stellt auch automatisch sicher, dass keine Duplikate von Orten enthalten sein kann.
 
@@ -292,7 +293,8 @@ Mittels des Geospitial-Index werden hier alle Geräte geliefert, welche an einem
 
 Weitere Informationen zu einem Gerät inklusive aller vorhanden Orte bei denen das Gerät erkundet wurden, werden hier geliefert. Als Identikiationsmittel wird die MAC Adresse des Gerätes via Query Parameter mit hineingereicht.
 
-\item{} \textbf{GET /location}
+\item{} \textbf{POST /location}
+%TODO Change to GET
 
 Diese Route berechnet anhand von gegeben MAC Adressen den mittleren Standort. Die Adressen werden im Request Body als Json mit übergeben. Anhand des mittleren Standorts der Geräte kann im folgenden eine Positionsbestimmung eines Clients durchgeführt werden.
 

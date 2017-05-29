@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
             headers.add(new String[]{"Content-Type", "application/json"});
             HttpResultHelper httpResult = null;
             try {
-                httpResult = httpPost(API.URL, API.USER, API.KEY, data.toString(), headers, 120000);
+                httpResult = httpPost(API.URL, API.USER, API.KEY, data.toString(), headers, 300000);
             } catch (IOException e) {
                 e.printStackTrace();
                 updateProgressMessage("Something went wrong during upload", true);
