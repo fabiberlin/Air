@@ -1,4 +1,4 @@
 cd /
-cd /home/ubuntu/AirSniffer/api
-python airSnifferApi.py
+cd /home/ubuntu/Air/AirPI
+python airpi.py
 cd /
