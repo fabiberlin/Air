@@ -99,35 +99,46 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Handler guiHandler = new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(Message msg) {
-            if (d) Log.d(TAG, "Callback - positionUpdated");
 
-            double longitude = msg.getData().getDouble("longitude");
-            double latitude = msg.getData().getDouble("latitude");
+            switch (msg.what){
+                case WiFiSniffer.CODE_OK:
+                    if (d) Log.d(TAG, "Callback - positionUpdated");
+                    double longitude = msg.getData().getDouble(WiFiSniffer.EXTRA_LONGITUDE);
+                    double latitude = msg.getData().getDouble(WiFiSniffer.EXTRA_LATITUDE);
+                    long time = msg.getData().getLong(WiFiSniffer.EXTRA_TIME);
+                    int numNetworks = msg.getData().getInt(WiFiSniffer.EXTRA_NUM_OF_NETWORKS);
+                    if (d) Log.d(TAG, "Callback - " + longitude + " " + latitude);
 
-            if (d) Log.d(TAG, "Callback - " + longitude + " " + latitude);
+                    Toast.makeText(getApplicationContext(), "DB Response Time: " + time + "\nNum of networks: "+numNetworks, Toast.LENGTH_SHORT).show();
 
-            LatLng myPosition = new LatLng(longitude, latitude);
+                    LatLng myPosition = new LatLng(longitude, latitude);
 
-            if (myOldPosition != null){
-                //draw line
-                mMap.addPolyline((new PolylineOptions())
-                        .add(myOldPosition, myPosition).width(10).color(Color.BLUE)
-                        .visible(true));
+                    if (myOldPosition != null){
+                        //draw line
+                        mMap.addPolyline((new PolylineOptions())
+                                .add(myOldPosition, myPosition).width(10).color(Color.BLUE)
+                                .visible(true));
+                    }
+                    myOldPosition = myPosition;
+
+                    // remove old maker
+                    if (myPositionMarker != null) {
+                        myPositionMarker.remove();
+                    }
+
+                    myPositionMarker = mMap.addMarker(new MarkerOptions().position(myPosition).title("Your Position"));
+
+                    CameraPosition cameraPosition = new CameraPosition.Builder()
+                            .target(myPosition)      // Sets the center of the map to Mountain View
+                            .zoom(17)                   // Sets the zoom
+                            .build();                   // Creates a CameraPosition from the builder
+                    mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                    break;
+
+                case WiFiSniffer.CODE_FAIL:
+
+                    break;
             }
-            myOldPosition = myPosition;
-
-            // remove old maker
-            if (myPositionMarker != null) {
-                myPositionMarker.remove();
-            }
-
-            myPositionMarker = mMap.addMarker(new MarkerOptions().position(myPosition).title("Your Position"));
-
-            CameraPosition cameraPosition = new CameraPosition.Builder()
-                    .target(myPosition)      // Sets the center of the map to Mountain View
-                    .zoom(17)                   // Sets the zoom
-                    .build();                   // Creates a CameraPosition from the builder
-            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         }
     };
 }

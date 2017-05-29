@@ -364,24 +364,16 @@ def get_locations():
     # app.logger.info(str(request))
     # app.logger.info(json.dumps(request.json, indent=3))
     starttime = getTime()
-
     devices = request.json['devices']
     db_devices = []
-
     num_devices = 0
-
     for device in devices:
-
-        #        app.logger.info("Find: " + str(device["address"]))
         result = mongo.db.devices.find_one({'address': device["address"]})
-        #        app.logger.info("DB Device: " + str(result))
-
         if result is None:
             # This one is new! Forget it
             pass
         else:
             # This already exist
-            #            app.logger.info("Found matching Device in DB " + str(device))
             db_devices.append(result)
             num_devices += 1
 
@@ -399,7 +391,7 @@ def get_locations():
         loc = [lo, la]
 
         endtime = getTime()
-        return jsonify({'time': (endtime - starttime), 'result': loc})
+        return jsonify({'time': (endtime - starttime), 'result': loc, 'numOfNetworks': num_devices})
 
 
 if __name__ == '__main__':

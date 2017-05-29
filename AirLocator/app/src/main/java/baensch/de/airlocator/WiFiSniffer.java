@@ -44,6 +44,16 @@ public class WiFiSniffer {
     private Handler handler;
     private Timer scanTimer;
 
+    public static final int CODE_OK = 1;
+    public static final int CODE_FAIL = 2;
+
+    public static final String EXTRA_FAILMESSAGE = "fail";
+
+    public static final String EXTRA_LONGITUDE = "longitude";
+    public static final String EXTRA_LATITUDE = "latitude";
+    public static final String EXTRA_TIME = "time";
+    public static final String EXTRA_NUM_OF_NETWORKS = "numNetworks";
+
     public WiFiSniffer(Context context, Handler handler) {
         this.context = context;
         this.sniffSink = new SniffSink();
@@ -145,17 +155,17 @@ public class WiFiSniffer {
 
                 double longitude = pos.getDouble(1);
                 double latitude = pos.getDouble(0);
+                long time = jsonObject.getLong("time");
+                int numLocations = jsonObject.getInt("numOfNetworks");
 
-                Location location = new Location(longitude, latitude);
-
-
-                Message msg = handler.obtainMessage(1);
+                Message msg = handler.obtainMessage(CODE_OK);
                 Bundle bundle =  new Bundle();
-                bundle.putDouble("longitude", longitude);
-                bundle.putDouble("latitude", latitude);
+                bundle.putDouble(EXTRA_LONGITUDE, longitude);
+                bundle.putDouble(EXTRA_LATITUDE, latitude);
+                bundle.putLong(EXTRA_TIME, time);
+                bundle.putInt(EXTRA_NUM_OF_NETWORKS, numLocations);
                 msg.setData(bundle);
                 handler.sendMessage(msg);
-
 
             } catch (JSONException e) {
                 e.printStackTrace();
