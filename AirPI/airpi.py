@@ -109,7 +109,6 @@ def has_valid_query_params(request):
 @requires_auth
 def get_devices_at_pos():
     starttime = getTime()
-    mongo.db.devices.create_index([("loc", GEO2D)])
     if not has_valid_query_params(request):
         app.logger.info("Aborted Request due lack of query params")
         abort(400)
@@ -120,6 +119,7 @@ def get_devices_at_pos():
     app.logger.info("get_devices_at_pos - Get Devices at " + str(longitude) + ", " + str(latitude) + ", " + str(
         distance) + ", " + type)
 
+    mongo.db.devices.ensure_index([("loc", GEO2D)])
     query = [{"loc": SON([("$near", [longitude, latitude]), ("$maxDistance", distance)])}]
     if request.args.get('type') is not None:
         query.append({"type": type})
@@ -155,7 +155,6 @@ def has_valid_query_params_for_rect(request):
 @requires_auth
 def get_devices_at_rect():
     starttime = getTime()
-    mongo.db.devices.create_index([("loc", GEO2D)])
     if not has_valid_query_params_for_rect(request):
         app.logger.info("Aborted Request due lack of query params")
         abort(400)
@@ -168,6 +167,7 @@ def get_devices_at_rect():
     app.logger.info("get_devices_at_pos - Get Devices at " + str(neLat) + ", " + str(neLon) + str(swLat) + ", " + str(
         swLon) + ", " + type)
 
+    mongo.db.devices.ensure_index([("loc", GEO2D)])
     query = [{"loc": {"$within": {"$box": [[swLon, swLat], [neLon, neLat]]}}}]
     if request.args.get('type') is not None:
         query.append({"type": type})
