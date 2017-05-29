@@ -9,6 +9,8 @@ from functools import wraps
 from flask import request, Response
 import time
 import api_prefs
+import json
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -228,12 +230,15 @@ def get_one_device():
 @app.route('/devices', methods=['POST'])
 @requires_auth
 def add_devices():
-    devices = mongo.db.devices
     app.logger.info("POST REQUEST")
+    app.logger.info(os.path.dirname(os.path.abspath(__file__)))
 #    app.logger.info(str(request))
 #    app.logger.info(json.dumps(request.json, indent=3))
 
     devices = request.json['devices']
+
+    with open(os.path.dirname(os.path.abspath(__file__)) + "/jsons/" + str(getTime())+'.json', 'w') as outfile:
+        json.dump(request.json, outfile)
 
     for device in devices:
         # app.logger.info(json.dumps(device, indent=3))
