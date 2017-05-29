@@ -46,15 +46,15 @@ def requires_auth(f):
 
 
 def isvalid_type(type_param):
-    toreturn = type_param == "WiFi" or type_param == "BtLe" or type_param == "BtEdr"
-    app.logger.info("isvalid_param " + str(toreturn))
-    return toreturn
+    to_return = type_param == "WiFi" or type_param == "BtLe" or type_param == "BtEdr"
+    app.logger.info("isvalid_param " + str(to_return))
+    return to_return
 
 
 @app.route('/devices', methods=['GET'])
 @requires_auth
 def get_all_devices():
-    starttime = getTime()
+    start_time = getTime()
     type = str(request.args.get('type'))
     counter = 0
     devices = mongo.db.devices
@@ -84,8 +84,9 @@ def get_all_devices():
         counter += 1
     end_time = getTime()
     app.logger.info(
-        "get_all_devices- Get Device took " + str(end_time - starttime) + " ms - Devicecount: " + str(counter) + " for Type: " + type)
-    return jsonify({'count': counter, 'time': (end_time - starttime), 'result': output})
+        "get_all_devices- Get Device took " + str(end_time - start_time) + " ms - Devicecount: " + str(
+            counter) + " for Type: " + type)
+    return jsonify({'count': counter, 'time': (end_time - start_time), 'result': output})
 
 
 def has_valid_query_params(request):
@@ -110,7 +111,7 @@ def has_valid_query_params(request):
 @app.route('/devicesAtPos', methods=['GET'])
 @requires_auth
 def get_devices_at_pos():
-    starttime = getTime()
+    start_time = getTime()
     if not has_valid_query_params(request):
         app.logger.info("Aborted Request due lack of query params")
         abort(400)
@@ -144,10 +145,11 @@ def get_devices_at_pos():
             'type': q['type'],
             'security': q['security'],
             'locations': q['locations']})
-    endtime = getTime()
+    end_time = getTime()
     app.logger.info(
-        "get_devices_at_pos - took " + str(endtime - starttime) + " ms - deliver : " + str(len(output)) + " devices")
-    return jsonify({'count': len(output), 'time': (endtime - starttime), 'result': output})
+        "get_devices_at_pos - took " + str(end_time - start_time) + " ms - deliver : " + str(len(output)) + " devices")
+    return jsonify({'count': len(output), 'time': (end_time - start_time), 'result': output})
+
 
 def has_valid_query_params_for_rect(request):
     return True
@@ -156,21 +158,21 @@ def has_valid_query_params_for_rect(request):
 @app.route('/devicesAtRect', methods=['GET'])
 @requires_auth
 def get_devices_at_rect():
-    starttime = getTime()
+    start_time = getTime()
     if not has_valid_query_params_for_rect(request):
         app.logger.info("Aborted Request due lack of query params")
         abort(400)
-    neLat = float(request.args.get('neLat'))
-    neLon = float(request.args.get('neLon'))
-    swLat = float(request.args.get('swLat'))
-    swLon = float(request.args.get('swLon'))
+    ne_lat = float(request.args.get('neLat'))
+    ne_lon = float(request.args.get('neLon'))
+    sw_lat = float(request.args.get('swLat'))
+    sw_lon = float(request.args.get('swLon'))
 
     type = str(request.args.get('type'))
-    app.logger.info("get_devices_at_pos - Get Devices at " + str(neLat) + ", " + str(neLon) + str(swLat) + ", " + str(
-        swLon) + ", " + type)
+    app.logger.info("get_devices_at_pos - Get Devices at " + str(ne_lat) + ", " + str(ne_lon) + str(sw_lat) + ", " + str(
+        sw_lon) + ", " + type)
 
     mongo.db.devices.ensure_index([("loc", GEO2D)])
-    query = [{"loc": {"$within": {"$box": [[swLon, swLat], [neLon, neLat]]}}}]
+    query = [{"loc": {"$within": {"$box": [[sw_lon, sw_lat], [ne_lon, ne_lat]]}}}]
     if request.args.get('type') is not None:
         query.append({"type": type})
     else:
@@ -194,14 +196,14 @@ def get_devices_at_rect():
             'locations': q['locations']})
     endtime = getTime()
     app.logger.info(
-        "get_devices_at_rect - took " + str(endtime - starttime) + " ms - deliver : " + str(len(output)) + " devices")
-    return jsonify({'count': len(output), 'time': (endtime - starttime), 'result': output})
+        "get_devices_at_rect - took " + str(endtime - start_time) + " ms - deliver : " + str(len(output)) + " devices")
+    return jsonify({'count': len(output), 'time': (endtime - start_time), 'result': output})
 
 
 @app.route('/device', methods=['GET'])
 @requires_auth
 def get_one_device():
-    starttime = getTime()
+    start_time = getTime()
     app.logger.info("get_one_device")
     address = str(request.args.get('address'))
 
@@ -223,8 +225,8 @@ def get_one_device():
     else:
         abort(400)
 
-    endtime = getTime()
-    return jsonify({'count': 1, 'time': (endtime - starttime), 'result': output})
+    end_time = getTime()
+    return jsonify({'count': 1, 'time': (end_time - start_time), 'result': output})
 
 
 @app.route('/devices', methods=['POST'])
@@ -232,12 +234,12 @@ def get_one_device():
 def add_devices():
     app.logger.info("POST REQUEST")
     app.logger.info(os.path.dirname(os.path.abspath(__file__)))
-#    app.logger.info(str(request))
-#    app.logger.info(json.dumps(request.json, indent=3))
+    #    app.logger.info(str(request))
+    #    app.logger.info(json.dumps(request.json, indent=3))
 
     devices = request.json['devices']
 
-    with open(os.path.dirname(os.path.abspath(__file__)) + "/jsons/" + str(getTime())+'.json', 'w') as outfile:
+    with open(os.path.dirname(os.path.abspath(__file__)) + "/jsons/" + str(getTime()) + '.json', 'w') as outfile:
         json.dump(request.json, outfile)
 
     for device in devices:
@@ -260,7 +262,7 @@ def add_devices():
                 if location_addable(locationNewDevice, locations_d_b_device):
                     mongo.db.devices.update({"_id": result["_id"]},
                                             {"$addToSet": {"locations": locationNewDevice}})
-#        app.logger.info("Post Process Device: " + str(device))
+                #        app.logger.info("Post Process Device: " + str(device))
         post_process_device(device)
 
     return jsonify({'result': "Thx"})
@@ -285,31 +287,31 @@ def post_process_device(device):
     mongo.db.devices.update({"_id": device["_id"]},
                             {"$set": {"numL": i}})
 
-    maxDistance = 10;
+    max_distance = 10
     for location in device["locations"]:
-        dist = haversineDistance(lo, la, location["loc"][0], location["loc"][1])
-        if dist > maxDistance:
-            maxDistance = dist
+        dist = haversine_distance(lo, la, location["loc"][0], location["loc"][1])
+        if dist > max_distance:
+            max_distance = dist
     mongo.db.devices.update({"_id": device["_id"]},
-                            {"$set": {"radius": maxDistance}})
+                            {"$set": {"radius": max_distance}})
 
     pass
 
 
-def location_addable(locationCandidate, locations):
+def location_addable(location_candidate, locations):
     for location in locations:
-        distance = calcDistance(locationCandidate, location)
+        distance = calc_distance(location_candidate, location)
         # app.logger.info("Distance was "+str(distance))
         if distance < 2:
             return False
     return True
 
 
-def calcDistance(location1, location2):
-    return haversineDistance(location1["loc"][0], location1["loc"][1], location2["loc"][0], location2["loc"][1])
+def calc_distance(location1, location2):
+    return haversine_distance(location1["loc"][0], location1["loc"][1], location2["loc"][0], location2["loc"][1])
 
 
-def haversineDistance(lon1, lat1, lon2, lat2):
+def haversine_distance(lon1, lat1, lon2, lat2):
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
     dlon = lon2 - lon1
     dlat = lat2 - lat1
@@ -322,23 +324,24 @@ def haversineDistance(lon1, lat1, lon2, lat2):
 def getTime():
     return int(round(time.time() * 1000))
 
+
 @app.route('/status', methods=['GET'])
 @requires_auth
 def get_status():
-    starttime = getTime()
-    counterLocations = 0
+    start_time = getTime()
+    counter_locations = 0
     devices = mongo.db.devices
     db_devices = devices.find()
-    counterDevices = db_devices.count()
+    counter_devices = db_devices.count()
     for q in db_devices:
-        counterLocations += len(q['locations'])
+        counter_locations += len(q['locations'])
 
     end_time = getTime()
-    app.logger.info("get_status - took " + str(end_time - starttime) )
+    app.logger.info("get_status - took " + str(end_time - start_time))
     return jsonify({
-        'devices': counterDevices,
-        'locations': counterLocations,
-        'time': (end_time - starttime)})
+        'devices': counter_devices,
+        'locations': counter_locations,
+        'time': (end_time - start_time)})
 
 
 @app.route('/alive', methods=['GET'])
@@ -347,15 +350,15 @@ def alive():
 
 
 @app.route('/doStuff', methods=['GET'])
-def doStuff():
-    starttime = getTime()
+def do_stuff():
+    start_time = getTime()
     devices = mongo.db.devices
-    dbDevices = devices.find()
-    for device in dbDevices:
+    db_devices = devices.find()
+    for device in db_devices:
         post_process_device(device)
 
-    endtime = getTime()
-    return jsonify({'time': (endtime - starttime), 'result': "Done"})
+    end_time = getTime()
+    return jsonify({'time': (end_time - start_time), 'result': "Done"})
 
 
 @app.route('/location', methods=['POST'])
@@ -363,7 +366,7 @@ def doStuff():
 def get_locations():
     # app.logger.info(str(request))
     # app.logger.info(json.dumps(request.json, indent=3))
-    starttime = getTime()
+    start_time = getTime()
     devices = request.json['devices']
     db_devices = []
     num_devices = 0
@@ -390,8 +393,8 @@ def get_locations():
         la /= num_devices
         loc = [lo, la]
 
-        endtime = getTime()
-        return jsonify({'time': (endtime - starttime), 'result': loc, 'numOfNetworks': num_devices})
+        end_time = getTime()
+        return jsonify({'time': (end_time - start_time), 'result': loc, 'numOfNetworks': num_devices})
 
 
 if __name__ == '__main__':
