@@ -57,7 +57,7 @@ function getDataFromApiWithin(bounds) {
     doAsyncCall(url);
     var url = "https://api.what3words.com/v2/grid?bbox="+neLat+","+neLon+","+swLat+","+swLon+"&format=json&key="+WhatThreeWords_KEY;
     //console.log(url);
-    callWhat3Words(url);
+    //callWhat3Words(url);
 }
 
 function processWhat3Words(data) {
