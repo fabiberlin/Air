@@ -51,36 +51,28 @@
 
 \newpage
 
-%TODO WLAN statt WiFi Terminologie
-
 \section{Vorstellung}
 
 Diese Arbeit dient als Dokumentation und Erklärung des Independent Courseworks zum Thema "Erfassung und Verabeitung von WLAN Signalen anhand von mobilen Endgeräten für die Nutzung als Positionierungssystem".
 
 Dieses Verfahren zur Positionsbestimmung mittel WiFi Signalen wird beireits angewandt. Jedoch sind die bisherigen Crowdbasierten Ansätze für die Erstellung solch einer Plattform zu gering vertreten und schwach verbreitet. Die Arbeit soll daher prototyptechnisch diese Thematik untersuchen und am Ende evaluieren.
 
-Es werden dabei verschiedene Softwarekomponenten auf verschiedenen Plattformen für die jeweiligen Aufgabe erstellt. Es wird dabei nur oberflächlich auf die Implementierung eingegangen. Sämtlicher Source Code ist auf GitHub unter der MIT Lizenz veröffentlicht. 
-%TODO github + MIT
-
-
+Es werden dabei verschiedene Softwarekomponenten auf verschiedenen Plattformen für die jeweiligen Aufgabe erstellt. Es wird dabei nur oberflächlich auf die Implementierung eingegangen. Sämtlicher Source Code ist auf GitHub~\cite{github} veröffentlicht. 
 
 \section{Konzept}
 
-Mit der Öffnung des Global Postioning Systems (GPS) im Jahre 2000 für die zivile Nutzung war es erstmals für den Endanwender möglich eine Lokalisierung mit einfachen technischen Geräten wie Smartphones zu erreichen.
+Mit der Öffnung des Global Postioning Systems~(GPS)~\cite{gps} im Jahre 2000 für die zivile Nutzung war es erstmals für den Endanwender möglich eine Lokalisierung mit einfachen technischen Geräten wie Smartphones zu erreichen.
 
-Das GPS besteht dabei aus einer Reihe an geostationären  Stateliten, welche permanent codierte Radiosignale an die Erde senden. Darin sind der Standort des Sateliten und die genaue Uhrzeit enthalten. Empfangsgeräte können aus diesen Signalen dann ihren Standort mittels der Signallaufzeit errechenen. Eine Sichtverbindung zu mindestens 4 Sateliten wird benötigt.
+Das GPS besteht dabei aus einer Reihe an geostationären Stateliten, welche permanent codierte Radiosignale an die Erde senden. Darin sind der Standort des Sateliten und die genaue Uhrzeit enthalten. Empfangsgeräte können aus diesen Signalen dann ihren Standort mittels der Signallaufzeit errechenen. Eine Sichtverbindung zu mindestens 4 Sateliten wird benötigt.
 
-Dieser Prozess kann entsprechend lange dauern. Das Phänomen wird umgangssprachlich auch "GPS Fix" gennant. Also die verstrichene Zeit, bis das GPS Signal so stabil ist, dass eine Berechnung erfolgen kann. 
+Dieser Prozess kann entsprechend lange dauern. Das Phänomen wird umgangssprachlich auch "GPS Fix" gennant~\cite{gpsfix}. Also die verstrichene Zeit, bis das GPS Signal so stabil ist, dass eine Berechnung erfolgen kann. 
 
 Zum anderen hat das globale Positionierungssystem auch Schwächen in stark urbanisierten Bereichen. So ist in Großstädten mit hohen Häusern die Genauigkeit der Berechnung der Position eher schlecht. Dies ist zum einen durch die Verdeckung von Sateliten mit Hochhäusern zu erklären, anderseits kann es auch auch zu Reklektionen von GPS Signalen führen, welche die Positionierung verschlechtern.
 
-Die Idee hinter der WLAN-basierten Ortung gibt es schon bereits seit längerem. Hierbei können Geräte die sichtbaren WLAN Netze in iherer Umgebung an einen zentralen Service senden. Dieser Service kann durch eine Verknüfung von WLAN Netz und Position des Netzes, den Standort des Anfragers errechnen. Dazu muss jedoch der Service über die enstprechenden Daten verfügen. Das heißt, zu sämtlichen Netzen muss der Standort gespeichert sein. Der Aufbau dieser Datenbank stellt dabei eine Sisyphusarbeit dar und muss regelmäßig überholt werden. Anbieter wie Skyhook oder Google 
-%TODO REF
-nutzen dazu spezielle Fahrzeuge mit Messantennen, welche durch die Städte fahren (Meist in Verbindung mit anderen Aufgaben). 
-%TODO Streeview oa.
+Die Idee hinter der WLAN-basierten Ortung gibt es schon bereits seit längerem. Hierbei können Geräte die sichtbaren WLAN Netze in iherer Umgebung an einen zentralen Service senden. Dieser Service kann durch eine Verknüfung von WLAN Netz und Position des Netzes, den Standort des Anfragers errechnen. Dazu muss jedoch der Service über die enstprechenden Daten verfügen. Das heißt, zu sämtlichen Netzen muss der Standort gespeichert sein. Der Aufbau dieser Datenbank stellt dabei eine Sisyphusarbeit dar und muss regelmäßig überholt werden. Anbieter wie Skyhook~\cite{skyhook} oder Google~\cite{google_pos} nutzen dazu spezielle Fahrzeuge mit Messantennen, welche durch die Städte fahren (Meist in Verbindung mit anderen Aufgaben). 
 
-Daneben gibt es auch solche Services, welche auf Crowdbasierte Informationen zurückgreifen. Dabei kann jeder einen Beitrag leisten und so zum Aufbau, Erweiterung und Wartung des Services beitragen. Als Beispiel seien hier Wigle oder OpenWifi.su. genannt.
-%TODO REF
+Daneben gibt es auch solche Services, welche auf Crowdbasierte Informationen zurückgreifen. Dabei kann jeder einen Beitrag leisten und so zum Aufbau, Erweiterung und Wartung des Services beitragen. Als Beispiel seien hier Wigle~\cite{wigle} oder OpenWifi.su.~\cite{openwifi} genannt.
+
 Als primärer Verwendungszweck des hier vorgestellten Projekts soll eben dieser Crowd-basierte Ansatz sein.
 
 Im weiteren Verlauf der Arbeit wird daher zunächst nocheinmal ein Blick auf raumbezogene Daten geworfen und inwiefern dies verarbeitet werden können. Danach folgt eine allgemeiner Abriss über das Anwendungsdesign und aller Komponenten des Systems. 
@@ -88,7 +80,6 @@ Im weiteren Verlauf der Arbeit wird daher zunächst nocheinmal ein Blick auf rau
 In den folgenden Kapiteln wird dann zunächst erläutert wie WLAN Daten gesammelt werden, diesen dann einer zentralen Einheit (API) zugestellt wird und mittels einer Visualierung bzw der Standortbestimmung seitens des Endanwenders benutzt werden kann
 
 %TODO Warchalking
-%TODO Sniffer vs. API vs. Locator vs. Visualisierung (Grob)
 
 \section{Geospatial Data}
 
@@ -116,9 +107,8 @@ public static double haversine(
     return R * c;
 }
 \end{lstlisting}
-%TODO REF
 
-Da wir später an mehreren Orten das WLAN Signal eines Routers einfangen werden, stellt sich die Frage, wie können wir auf den Quellort des Signals schließen. Hier gibt es mehrere Verfahren. Ich werde zu Beginn lediglich den Durchschnitt der Koordinaten als Zentrum benutzen. In späteren Versionen kann dort noch ein Gewichtung mit der Qualität des GPS und der aktuellen Empfangsleistung des WLANs kombiniert werden.
+Da wir später an mehreren Orten das WLAN Signal eines Routers einfangen werden, stellt sich die Frage, wie können wir auf den Quellort des Signals schließen? Hier gibt es mehrere Verfahren. Ich werde zu Beginn lediglich den Durchschnitt der Koordinaten als Zentrum benutzen. In späteren Versionen kann dort noch ein Gewichtung mit der Qualität des GPS und der aktuellen Empfangsleistung des WLANs kombiniert werden.
 
 \section{Anwendungsdesign}
 
@@ -126,13 +116,13 @@ Das System wird sich wie eingangs erwähnt in 4 Teile untergliedern, welche vone
 
 Der ''\textbf{AirSniffer}'' ist die Smartphone Anwendung, welche für das Sammeln der Daten zuständig ist. Diese muss dabei so gestaltet werden, dass zunächst keine API Anbindung notwendig ist. Sie soll autark - also offline - ebenso funktionieren. Daher muss hier eine Datenbank zur Speicherung der lokalen Ergebnisse stattfinden. Diese Resultate können dann an die API gesendet werden, um die Daten zu veröffentlichen. Als Prototyp wird eine Anwendung in Android (nativ) umgesetzt. 
 
-Die ''\textbf{AirPI}'' dient als zentaler Service des Systems. Hier können die Daten der AirSniffer App hochgeladen werden. Zudem werden Funktionalitäten zum Abrufen der WLAN bzw. raumgebundenen Daten angeboten, welche die verarbeitenden Apps nutzen können. Die API wird unter Python mit Flask laufen. Für den Datenhaushalt sorgt eine MongoDB.
+Die ''\textbf{AirPI}'' dient als zentaler Service des Systems. Hier können die Daten der AirSniffer App hochgeladen werden. Zudem werden Funktionalitäten zum Abrufen der WLAN bzw. raumgebundenen Daten angeboten, welche die verarbeitenden Apps nutzen können. Die API wird unter Python mit Flask~\cite{flask} laufen. Für den Datenhaushalt sorgt eine MongoDB~\cite{mongodb}.
 
-Die ''\textbf{AirVis}'' Anwendung dient als Visualisierungtool der Daten aus der AirPI. Die webbasierte Anwendung stellt dabei eine interakive Karte mit verschiedenen Filterfunktion zur Verfügung. Daraus können aus den Rohinformation ein positiver Mehrwert gezogen werden. Technolgien für die Umsetzung sind dabei HTML, Javascript und CSS. Zudem wird die Google Maps API verwendet. Aufgesetzt wird die Anwenudung in einer Linux / Apache Umgebung.
+Die ''\textbf{AirVis}'' Anwendung dient als Visualisierungtool der Daten aus der AirPI. Die webbasierte Anwendung stellt dabei eine interakive Karte mit verschiedenen Filterfunktion zur Verfügung. Daraus können aus den Rohinformation ein positiver Mehrwert gezogen werden. Technolgien für die Umsetzung sind dabei HTML, Javascript und CSS. Zudem wird die Google Maps API~\cite{googlemapsapi} verwendet. Aufgesetzt wird die Anwenudung in einer Linux / Apache Umgebung.
 
 Der ''\textbf{AirLocator}'' ist eine beispielhafte Anwendung, welche auf Grundlage der Daten aus der API eine Positionsbestimmung durchführt. Die eigentliche Berechnung wird dabei von der AirPI ausgeführt. Die Anwendung dient lediglich als Anzeige. Wie auch der AitSniffer wird sie als native Android API mit einer Google Maps API Anbindung programmiert.
 
-Alle Komponenten in ihren Beziehung ist in Abbildung~\ref{fig:Anwendungsdesign} ersichtlich.
+Alle Komponenten in ihren Beziehungen sind in Abbildung~\ref{fig:Anwendungsdesign} ersichtlich.
 
 \begin{figure}[htbp]
     \centering
@@ -145,7 +135,7 @@ Alle Komponenten in ihren Beziehung ist in Abbildung~\ref{fig:Anwendungsdesign} 
 \newpage
 \section{AirSniffer}
 
-Als Datemerfassungsandwendung wurde wie einfangs der AirSniffer entwickelt. Dies ist eine App unter Android. Sie soll dabei autark von der API breits laufen können, und ähnliche Funktionalitäten aufweisen. Dazu musste zunächst eine Datenbank auf dem Endgerät erstellt werden, um die aufgespührten Netzwerke persistent abszuspeichern. Android bietet dazu eine relationelle SQLite Datenbank an. Für den Andwendungsfall hier haben dabei 2 Tabellen gereicht. Eine für die WLANs und eine zur Speicherung der Örtlichkeeit. Dabei entsteht eine 1:n Beziehung. Das heißt, ein Gerät kann meherere Örtlichkeiten haben. Die Örtlichkeiten stellen dabei die Orte dar, an dem das Netzwerk sichtbar war. Die  Struktur der Datenbank sieht entsprechend wie folgt aus:
+Als Datemerfassungsandwendung wurde wie einfangs der AirSniffer entwickelt. Dies ist eine App unter Android. Sie soll dabei autark von der API breits laufen können, und ähnliche Funktionalitäten aufweisen. Dazu musste zunächst eine Datenbank auf dem Endgerät erstellt werden, um die aufgespührten Netzwerke persistent abszuspeichern. Android bietet dazu eine relationelle SQLite~\cite{sqlite} Datenbank an. Für den Andwendungsfall hier haben dabei 2 Tabellen gereicht. Eine für die WLANs und eine zur Speicherung der Örtlichkeeit. Dabei entsteht eine 1:n Beziehung. Das heißt, ein Gerät kann meherere Örtlichkeiten haben. Die Örtlichkeiten stellen dabei die Orte dar, an dem das Netzwerk sichtbar war. Die  Struktur der Datenbank sieht entsprechend wie folgt aus:
 
 \begin{figure}[htbp]
     \centering
@@ -157,7 +147,7 @@ Als Datemerfassungsandwendung wurde wie einfangs der AirSniffer entwickelt. Dies
 
 Der Key aus der ''Locations'' Tabelle dient dabei als Fremdschlüssel für den Eintrag aus ''Devices''. Jeder ''Device'' Eintrag hat zudem selber ein Feld mit der Angabe zur Längen- und Breitengrad. Hier wird später der Mittelwert errechnet und eingetragen. Dies dient lediglich der Perfomancestreigerung. 
 
-Um das Protokollieren von WLAN Daten im Hintergrund ausführen zu können, wurde eine selbständiger Service implementiert. Dieser ist unabhängig von der App. Die App mit den GUI Elementen kann diesen lediglich starten und stoppen. Daraus ergeben sich jedoch auch folgende Vorteile: Der Background Service erhält mehr Rechenleistung, er kann auch bei nichtaktiver GUI weiterarbeiten. Als wichtigister Vorteil ist jedoch, dass der Service nicht abbrechbar seitens Android ist. Normalerweise unterbricht Android nebenläufige Hintergrundprozesse nach einer gewissen Zeit. Ebenso kann der Prozess auch nicht beenedet werden, wenn der Benutzter die App absichtlich versucht zu stoppen. 
+Um das Protokollieren von WLAN Daten im Hintergrund ausführen zu können, wurde eine selbständiger Service implementiert. Dieser ist unabhängig von der App. Die App mit den GUI (Graphical User Interface) Elementen kann diesen lediglich starten und stoppen. Daraus ergeben sich jedoch auch folgende Vorteile: Der Background Service erhält mehr Rechenleistung, er kann auch bei nichtaktiver GUI weiterarbeiten. Als wichtigister Vorteil ist jedoch, dass der Service nicht abbrechbar seitens Android ist. Normalerweise unterbricht Android nebenläufige Hintergrundprozesse nach einer gewissen Zeit. Ebenso kann der Prozess auch nicht beenedet werden, wenn der Benutzter die App absichtlich versucht zu stoppen. 
 
 Nachteilig ist jedoch, dass die Kommunikation von GUI und Backgroundservice nicht mehr einfach herzustellen ist. Daher wurde für GUI Anwendung lediglich auf die Einträge der Datenbank zurückgegriffen.
 
@@ -196,12 +186,17 @@ Im Folgenden weiteren weitere Information hinzugefügt. So wird einer neuer Mitt
 %TODO REF TO Screenshot.
 
 Die eigentliche App mit sämtlichen GUI Elementen ist wie oben beschrieben unabhängig von dem eigentlichen Sniffen. Hier gibt es verschiedene Views, welche auch teilweise die Google Maps API verwenden.
-So gibt es zunächst eine Listenansicht mit allen lokal gesnifften Netzen. Ein Indikator gibt an, ob es sich um ein WLAN, BL LE oder BL EDR Gerät handelt. Zudem kann man auch direkt nach Netzen suchen. Die Detailansicht eines Gerätes offenbart zusätzlich alle referenzierte Orte, an den das Gerät sichtbar war. 
-Beide Views können dabei auch als Kartenansicht gestartet werden. Dabei wird zum Beispiel auch der Radius visualisert. 
+So gibt es zunächst eine Listenansicht mit allen lokal gesnifften Netzen (siehe Abbildung
+%TODO REF
+). Ein Indikator gibt an, ob es sich um ein WLAN, BL LE oder BL EDR Gerät handelt. Zudem kann man auch direkt nach Netzen suchen. Die Detailansicht eines Gerätes offenbart zusätzlich alle referenzierte Orte, an den das Gerät sichtbar war (siehe Abbildung
+%TODO REF
+). Beide Views können dabei auch als Kartenansicht gestartet werden. Dabei wird zum Beispiel auch der Radius visualisert (siehe Abbildung
+%TODO REF
+). Sämtliche Informationen sind jedoch lokal erstellt und stammen vom eigenem Gerät. Daher stellt die Anwendung auch eine Logik zum Hochladen sämtlicher gesnifften Netze an die AirPI zur Verfügung. Hierbei wird auf das Json Format zurückgegriffen. 
 
-Sämtliche Informationen sind jedoch lokal erstellt und stammen vom eigenem Gerät. Daher stellt die Anwendung auch eine Logik zum Hochladen sämtlicher gesnifften Netze an die AirPI zur Verfügung. Hierbei wird auf das Json Format zurückgegriffen. 
-
-Es hat sich unter Android gezeigt, dass es keine Suche seitens des Betriebssystems gibt, wenn der Bildschirm in den Ruhezustand geht. Daher wurde eine zusätzliche View erstellt, welche als Sperrbilschirm dient und den Bildschirm nicht abschaltet.
+Es hat sich unter Android gezeigt, dass es keine Suche seitens des Betriebssystems gibt, wenn der Bildschirm in den Ruhezustand geht. Daher wurde eine zusätzliche View erstellt, welche als Sperrbilschirm dient und den Bildschirm nicht abschaltet (siehe Abbildung
+%TODO REF
+).
 
 %TODO wificracker anteasern
 
@@ -210,7 +205,7 @@ Es hat sich unter Android gezeigt, dass es keine Suche seitens des Betriebssyste
 Dieser Teil des Systems soll als zentrales Rückrat dienen. Hier können ersniffte Netze hochgeladen und gespeichert werden. Zudem sollen weitere Prozeduren entahlten sein, um diese zu optimieren und zu validieren. 
 Des weiteren sollen Schnittstellen gefunden werden, um die vorhanden Daten sinnvoll  verschiedene Services anzubieten.
 
-Technisch wurde hier aus einer Kombination von Flask und MongoDB mit PyMongo als Bindeglied gesetzt. Flask ist ein Webframework unter Python. Enthalten ist eine Template Enging ''Jinja2'' und die hier benötigte Bibliothek ''Werkzeug'' zum erstellen von WSGI Anwendungen (Web Server Gateway Interface). Flask ist sehr handlich. Die Hello World Anwendung besteht aus gerade mal 7 Zeilen Code.
+Technisch wurde hier aus einer Kombination von Flask~\cite{flask} und MongoDB~\cite{mongodb} mit PyMongo~\cite{pymongo} als Bindeglied gesetzt. Flask ist ein Webframework unter Python. Enthalten ist eine Template Enging ''Jinja2'' und die hier benötigte Bibliothek ''Werkzeug'' zum erstellen von WSGI Anwendungen (Web Server Gateway Interface). Flask ist sehr handlich. Die Hello World Anwendung besteht aus gerade mal 7 Zeilen Code.
 
 \begin{lstlisting}[language=Python]
 from flask import Flask
@@ -223,7 +218,6 @@ def hello():
 if __name__ == "__main__":
     app.run()
 \end{lstlisting}
-%TODO REF http://flask.pocoo.org/
 
 \noindent Zusätliche wurde eine Basic Authentifizierung eingeführt. Diese ist mit einem statischen Benutzer und Kennwort vorgegeben.
 Mit dieser Vorgehensweise wurden folgende API Signaturen erstellt. 
@@ -238,7 +232,6 @@ GET     /status
 GET     /alive
 POST    /location
 \end{lstlisting}
-%TODO Change to GETs
 
 Die MongoDB Datenbank ist eine Dokumentbasierte Datenbank. Daher kann die relationale Datenbank aus Android nicht einfach auf diese gemappt werden. Stattdessen ist nun die ''Locations'' Tabelle, welche via Fremdschlüssel angesprochen wurde, direkt als Set im ''Device'' Modell enthalten. Dies stellt auch automatisch sicher, dass keine Duplikate von Orten enthalten sein kann.
 
@@ -264,8 +257,6 @@ query = [{"loc": {"$within": {"$box": [
    }}}]
 devices = mongo.db.devices.find({"$and": query}
 \end{lstlisting}
-%TODO ensureInddex vs createÍndex
-
 
 \newpage
 \noindent
@@ -294,7 +285,6 @@ Mittels des Geospitial-Index werden hier alle Geräte geliefert, welche an einem
 Weitere Informationen zu einem Gerät inklusive aller vorhanden Orte bei denen das Gerät erkundet wurden, werden hier geliefert. Als Identikiationsmittel wird die MAC Adresse des Gerätes via Query Parameter mit hineingereicht.
 
 \item{} \textbf{POST /location}
-%TODO Change to GET
 
 Diese Route berechnet anhand von gegeben MAC Adressen den mittleren Standort. Die Adressen werden im Request Body als Json mit übergeben. Anhand des mittleren Standorts der Geräte kann im folgenden eine Positionsbestimmung eines Clients durchgeführt werden.
 
@@ -306,15 +296,19 @@ Diese Route berechnet anhand von gegeben MAC Adressen den mittleren Standort. Di
 
 \section{AirVis}
 
-AirVis ist die Visualisierungkomponente in diesem System. Sie ist webbasiert und ermöglicht die Veranschaulichung der in der AirPI gespeichert Daten. Durch das einfache Navigieren mittels einer Karte und verschiedenen Filterungstechniken entsteht ein erheblicher Mehrwert für den Nutzer.
+AirVis ist die Visualisierungkomponente in diesem System. Sie ist webbasiert und ermöglicht die Veranschaulichung der in der AirPI gespeichert Daten. Durch das einfache Navigieren mittels einer Karte und verschiedenen Filterungstechniken entsteht ein erheblicher Mehrwert für den Nutzer. Abbildung
+%TODO REF
+zeigt eine Beispielansicht des AirVis.
 
 Die verwendeten Techniken sind im groben HTML, Javascript in Kombination mit der Google Maps API und des eigens entwickelten AirPI. Als Grundfunktion steht zunächst eine Kartenansicht wie auch auf maps.google.de zu sehen ist. Im Weiteren wird diese jedoch mit den gesnifften Netzen aus der AirPI angereichert. Dazu wird der jeweilige Kartenausschnitt als Bounding Box erfasst und an die AirPI gesendet. Wie aus dem vorherigen Kapitel bereits beschrieben, werden nun alle Netze in dieser Box aggregiert und an den Client zurückgesendet. Diese Daten werden dann vom Webclient mittels einfacher Marker auf die Map gesetzt.
 
-Durch Klick auf einen dieser Marker werden dabei zusätzliche Informationen zu diesem Netz von der AirPI abgerufen. So erscheinen nun zusätzliche alle referenzierte Orte zu diesen Netz.
+Durch Klick auf einen dieser Marker werden dabei zusätzliche Informationen zu diesem Netz von der AirPI abgerufen. So erscheinen nun zusätzliche alle referenzierte Orte zu diesen Netz(siehe Abbildung
+%TODO REF
+).
 
 Somit können mit diesen einfachen Mitteln bereits die Welt nach Netzwerken erkundet werden. Zusätzlich wurde ein Filterpanel integriert. Hier kann z.B. gezielt nach einem Netz gesucht werden oder aber verschiedene Typen von Netzen an- und ausgeschaltet werden
 \footnote{Unterscheidung nach WLAN, BL LE und BL EDR}.
-Ebenso is es möglich nach Parametern wie Aznahl referenzierter Orten oder Größe des Radius zu filtern. 
+Ebenso is es möglich nach Parametern wie Aznahl referenzierter Orten oder Größe des Radius zu filtern. Die Filterung wird dabei derzeit nur auf dem WebClient durchgeführt. Es sind aber auch einige Filterungtechniken seites der AirPI vorhanden.
 
 Ein Statuspanel zeigt überdies die Anzahl der verschiedenen Elemente in der AirPI an sowie die Zeiten der AirPI bei der Beantwortung von verschieden Requests.
 
@@ -326,62 +320,132 @@ Als Vorleistung dazu wurde bereits der AirPI mit der Route GET /Location ausgest
 
 Die Sniffer Funktionalität konnte dabei fast komplett übernommen werden. Nur werden die Daten nicht in eine Datenbank abgespeichert, sondern via eines HTTP GET an den AirPI gesendet. Im Gegenzug erhalten wir dann den errechneten Längen- und Breitengrad. 
 
-Dazu wurde in der Applikation lediglich ein GUI ELement erstellt. Eine View mit der Karte aus der Google Maps API. Bei erfolgreichem Response wird diese Position mittels Marker auf die Karte dargestellt. Es wird dabei jede Sekunde nach WLAN Netzen geschaut und ein Request gestartet. Um die Veränderungen der Position sichtbar zu machen, wurde zudem eine Spur in Form eines blauen Pfades der Map hinzugefügt. 
+Dazu wurde in der Applikation lediglich ein GUI ELement erstellt. Eine View mit der Karte aus der Google Maps API. Bei erfolgreichem Response wird diese Position mittels Marker auf die Karte dargestellt (siehe Abbildung
+%TODO REF
+). Es wird dabei jede Sekunde nach WLAN Netzen geschaut und ein Request gestartet. Um die Veränderungen der Position sichtbar zu machen, wurde zudem eine Spur in Form eines blauen Pfades der Map hinzugefügt (siehe Abbildung
+%TODO REF
+). 
 
 \section{Auswertung}
 
-%TODO Zeitmessung - Airlocators
-%TODO Zeitmessung - API Request mit BoundingBox 
-%TODO Always On Screen
-%TODO Genauigkeit der ermittelten WLAN Spots
-%TODO Genauigkeit der Messung (Airlocator)
-%TODO Genauigkeit GPS
+In diesem Kapitel soll das System bewertet werden. Dazu werden unteranderem die Laufzeiten bzw. Geschwindigkeit gemessen als auch die Genauigkeit der Ergebnisse untersucht. Wir werden dabei Schritt für Schritt vorgehen. Das heißt zunächst die Aspekte des Erfassens der WLAN Daten, dann die Zugriffszeiten auf die API und letztendlich die Genauigkeit des Lokalisierens mittels WLAN.
+
+Die Genauigkeit des GPS Signals während des Sniffens kann mit ausgelesen werden und wird auch die Datenbank mit eingetragen. Zudem wird sichergestellt das bei einem schlechtem Signal der Eintrag verworfen wird. Dennoch ist es teilweise zu "falschen" Einträgen gekommen. Siehe dazu auch Abbilung 
+%TODO REF
+im Anhang. Die Angaben zum GPS Signal kommen jedoch vom Android System und können nicht beeinflusst bzw. verifiziert werden. Im Kapitel Ausblick wird jedoch noch eine Gegenmaßnahme erläutert.
+
+Die Genauigkeit der errechneten Zentren der Netzsignale scheint dabei relativ gut zu sein. Ausreißer haben bei einer großen Masse an Messpunkte eine untergeordnete Rolle. Anhand meines Heimnetzwerks kann man gut erkennen, dass die Berechnung gut funktioniert. In Abbildung 
+%TODO REF
+im Anhang sieht man dazu den errechneten Standort meines Routers. Der tatsächliche Standort liegt in echt nur 5~Meter daneben.
+
+Die nächsten Punkte haben teilweise etwas mit der Leistungsfähigkeit des Servers zu tun, auf welcher die AirPI ausgeführt wird. In meinem Beispiel läuft die Anwendung auf einem Pine64~\cite{pine64} mit Ubuntu 16.04. Dieser Kleinstrechner ist in erster Linie nicht für solche Zwecke erfunden worden. Daraus resultieren auch teils schlechte Laufzeiten der Anwendung.
+
+Ein negativer Aspekt des Systems ist derzeit noch nach das Hochladen der Daten von AirSniffer zur AirPI. Es liegt daran, dass die API noch eine Optimierung der Datenbank nach einem POST Request durchführt. Dieser Prozess kann teilweise sehr lange dauern (Abhängig von Größe der Daten im Requstbody). Eine Multithready unter Flask und MongoDB ist nicht einfach zu implementieren. Daher wurde daher hier im ersten Schritt drauf verzichtet. Es kann auf der Seite des AirSniffers beim Hochladen der Daten teilweise zu einer Fehlermeldung kommen. Dieses ist jedoch auf ein Timeout zurückzuführen. Die AirPI führt dennoch eine erfolgreiche Integration der neuen Daten durch.
+
+Die Responsezeiten eines API Requests mit einer Bounding Box (liefern aller Netze in diesem Bereich) unterliegt ebenfalls der Leistungsfähigkeit des Servers. Der Pine64 schafft bei einem Request, welcher 
+%TODO Wieviele
+Geräte beinhaltet, eine durchschnittliche Zeit von ca. 
+%TODO Wielang
+Milisekunden. Bei Ausprobieren des AirVis unter der gegebenen URL muss zudem beachtet werden, dass hier noch die Internetgeschwindigkeit am Pine64 eine entscheide Rolle spielt.
+
+Als weiteres wichtiges Auswertungskriterium liegt nun im Anwendungsfall der WLAN-basierten Ortung mittels der AirLocators. Hier liegen die Verabeitungzeiten des Pine64 bei ca.
+%TODO wie lange
+bei 
+%TODO wieviele geräte 
+gefunden Netzen auf dem AirPI. Dieser Wert ist um ein vielfaches schneller als die Zeit, bis das GPS Signal stabil genug für eine Ortung ist. Der Airlocator braucht daher effektiv nie länger als eine Sekunde für die Ortung (Der größte Teil der Zeit wird dabei sogar von der Google Maps API verbraucht).
+
+Eine beispielhafte Einzelmessung mittels vorhandener WLAN Daten durch den AirLocator kann in Abbildung 
+%TODO REF
+im Anhang eingesehen werden. Diese Ortung lag dabei nur 2~Meter neben der tatsächlichen Position. Dies kann durchaus als Erfolg bezeichnet werden. Zumal die Ortund wie bereits beschrieben sehr schnell verlief.
+
+In Abbildung
+%TODO REF
+im Anhang ist zudem ein zeitlicher Verlauf der WLAN-basierten Ortung anhand des blauen Pfads zu sehen. Dieser Pfad springt ein wenig, ist jedoch nie weiter als 5~Meter von der eigentlichen Position gewesen. Tatsächlich hatte die Linie entlang des Bügersteigs gerade ausgesehen.
 
 \section{Fazit}
 
-%TODO Ziel erreicht
-%TODO Skaliebarkeit fragwürdig
-%TODO --> Clustering
-%TODO was ist mit den ganzen gesnifften Bluetooth Dingern?
-%TODO Zusammenwirken mit anderen Apps (Navigation etc.)
+Ziel war es eine Crowd-basierte Datenbank für WLAN Netze zu erstellen, welche durch den Anwender mittels einer Smartphone Applikation aktiv befüllt wird. Diese sollte dann im nachhinein visualisert werden und mit einem praktischen Anwendungsvall - der WLAN-basierten Ortung - untermauert werden.
+
+Dies wurde hier durch das vorgestellten System aus AirSniffer, AirPI, AirVis und AirLocator erfolgreich geschafft. 
+
+Das Mitlesen der WLAN Daten wurde durch einen ausgereiften Backgroud Service und der Anbindung an die GUI für den Anwender sinnvoll umgesetzt. Die erstellte API bietet sinnvole Funktionalitäten und erreicht dies recht performant. Durch den webbasierten Visualisierungsclient kann die Datenbank untersucht und spielerisch erkundet werden. Die Positionierung durch den vorhandenen WLAN Daten funktioniert einwandfrei. Die einzelnen Komponenten als auch das Gesamtsystem wurden nach den gängigen Standards entwickelt und laufen sehr stabil.
+
+Die Skalierbarkeit muss durch größere Datenbestände weiter beobachtet werden.
+%TODO Wieviele sind da grad drin?
+Geräte mit 
+%TODO Wieviele sind da grad drin?
+Position sind derzeit enthalten. MongoDB würde durch das Sharded Cluster~\cite{sharding} dies durchaus anbieten.
+
+Das System kann auch gut fehlerhafte Daten verarbeiten. So ist bei teilweisen schlechten GPS Empfang beim Sniffen, die errechneten Zentren der Netze ausreißerfreundlich. Die Masse an Daten normalisert die fehlerhaften Daten.
 
 \section{Ausblick}
 
-%TODO Offline Rendering der Map
-%TODO what todo with BL?
-%TODO Other Stuff doable with all the data
-%TODO Different DB for different Typs
-%TODO Clustering of DB
-%TODO Multithreading of API
+Das System ist schon relativ groß, hat jedoch noch eine Menge Potenzial weiterentwickelt zu werden. Dabei haben sich bei mir folgende Verbesserungen bzw. Erweiterungen, welche den Umfang hier nicht gerecht werden, ergegeben.
 
+Für die Visualieserung wäre es durchaus sinnvoll, wenn es eine Rendering Prozedur seitens der API gibt. Diese sollte nicht bei Bedarf render, sonder die Rendering bereits vorgerendert haben. So würde der Datenverkehr zwischen AirPI und AirVis um ein deutliches verringert werden und gleichzeitig die Geschwindigkeit erhöht werden.
+
+Wie bereits erwähnt, wurde dieses System nicht nur für WLAN Netze erstellt. Es werden schon Bluetooth LE und Bluetooth EDR Geräte gesnifft und in der AirPI gespeichert. Ein Nutzen dieser Daten wurde hier noch nicht umgesetzt. Dies wäre jedoch für weitere Arbeiten mit dem System durchaus vorstellbar. Ebenso können aber auch anhand der WLAN Daten weitere Nutzungskonzepte erarbeitet werden.
+
+Eine performantere API mittels Multithreading oder Verteilung auf verschiedenen Prozessen ist für die Skalierung zwingend. Multithreading wurde aufgrund der Schwierigkeiten mit verteilten Daten nicht umgesetzt. Dies kann aber adaptiv ins System nicht integriert werden. Eine Verteilung mittels Sharded Cluster klingt ebenfalls viel versprechend.
+
+Derzeit erkennt das System schon recht gut, ob erfasste Daten valide erscheinen. Diese werden nicht mit in die Datenbank eingebracht. Dennoch kann es passieren, dass vereinzelt Ausreißer in der Datenbank erscheinen. Daher ist hier ein weiteres Feld, die Umsetzung einer Ausreißeranalyse, um die Daten noch wertvoller zu machen.
+
+Die Berechnungen mittels den Längen- und Breitengraden zur Zentrumsbestimmung sind derzeit zwar sehr effektiv auch sehr einfach. Hier kann aber anhand der bereits erfassten Daten eine präzisere Berchnung stattfinden. Es gibt Information zur Signalstärke des Netzes und der Präzision des GPS Signals. Diese könnten zum Beispiel für eine Gewichtung bei der Berechnung benutzt werden.
+
+Die Anwendung zur Erfassung der WLAN Daten (AirSniffer) wurde bereits komplett als Backgroundservice angelegt. Hier wäre ebenfalls eine Ausgliederung als SDK sinnvoll, um bereits bestehende Applikation die Möglichkeit zu bieten, an der WLAN Erfassung teilzunehmen. Denkbar wären zum Beispiel Navigationssysteme, welche ohnehin aktiv GPS benutzen. 
 
 \newpage
 \section{Abkürzungsverzeichnis}
 
 \begin{acronym}
- \acro{GPS}		{Global Positioning System}
- \acro{WLAN}	{Wireless Local Area Network} 
- \acro{API}		{Application Programming Interface}
- \acro{HTTP}	{Hypertext Transfer Protocol}
- \acro{JSON}	{JavaScript Object Notation}
- \acro{REST}	{Representational State Transfer}
- \acro{FQDN}	{Fully Qualified Domain Name}
- \acro{DNS}		{Domain Name System}
- \acro{CPU}		{Central Processing Unit}
- \acro{WSGI}	{Web Server Gateway Interface}
- \acro{BL LE}	{Bluetooth Low Energy (Bluetooth 4)}
- \acro{BL EDR}	{Bluetooth Enhanced Data Rate (Bluetooth 2)} 
-\end{acronym}
+\acro{API}		{Application Programming Interface}
+\acro{BL EDR}	{Bluetooth Enhanced Data Rate (Bluetooth 2)} 
+\acro{BL LE}	{Bluetooth Low Energy (Bluetooth 4)}
+\acro{GPS}		{Global Positioning System}
+\acro{GUI}		{Graphical User Interface }
+\acro{HTTP}		{Hypertext Transfer Protocol}
+\acro{JSON}		{JavaScript Object Notation}
+\acro{REST}		{Representational State Transfer}
+\acro{SDK}		{Software Development Kit}
+\acro{WLAN}		{Wireless Local Area Network}
+\acro{WSGI}		{Web Server Gateway Interface}
 
+\end{acronym}
 
 \begin{thebibliography}{99}
 
-\bibitem{nyt} The New York Times Developer Network, https://developer.nytimes.com/
+\bibitem{github} Github - Air Repository, https://github.com/fabiberlin/Air
+
+\bibitem{gps} Official U.S. government information about the Global Positioning System (GPS) and related topics, http://www.gps.gov/systems/gps/
+
+\bibitem{gpsfix} Wikipedia - Time to first fix, https://en.wikipedia.org/wiki/Time\textunderscore to\textunderscore first\textunderscore fix
+
+\bibitem{skyhook} Skyhook - WiFi Location Based Marketing \& Tracking, http://www.skyhookwireless.com/
+
+\bibitem{google_pos} Andorid SDK - Location Strategies, https://developer.android.com/guide/topics/location/strategies.html
+
+\bibitem{wigle} Wigle - Wireless Network Mapping, https://www.wigle.net/
+
+\bibitem{openwifi} OpenWifi.su - Open WLAN Map, http://openwifi.su/
+
+\bibitem{googlemapsapi} Google Maps API, https://developers.google.com/maps/
+
+\bibitem{sqlite} SQLite Dokumentation, https://sqlite.org/index.html
 
 \bibitem{unlock_slider} Stack Overflow - Wow to make slide to unlock button in Android, https://stackoverflow.com/questions/14910226
 
 \bibitem{harversine_distance} Harversine Distanz, 
 https://rosettacode.org/wiki/Haversine\textunderscore formula
+
+\bibitem{flask} Flask - Python Microframework,  http://flask.pocoo.org/
+
+\bibitem{mongodb} MongoDB - Offical Website, https://www.mongodb.com/
+
+\bibitem{pymongo} PyMongo Dokumentation, https://api.mongodb.com/python/current/
+
+\bibitem{pine64} Pine64 Product Website, https://www.pine64.org/?product=pine-a64-board-2gb
+
+\bibitem{sharding} MongoDB Sharding https://docs.mongodb.com/manual/sharding/
 
 %TODO ICONS 8
 
