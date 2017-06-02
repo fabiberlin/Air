@@ -56,7 +56,6 @@ function getDataFromApiWithin(bounds) {
     var url = BASEPATH+'/devicesAtRect?neLat='+neLat+'&neLon='+neLon+'&swLat='+swLat+'&swLon='+swLon;
     doAsyncCall(url);
     var url = "https://api.what3words.com/v2/grid?bbox="+neLat+","+neLon+","+swLat+","+swLon+"&format=json&key="+WhatThreeWords_KEY;
-    //console.log(url);
     //callWhat3Words(url);
 }
 
@@ -70,9 +69,6 @@ function processWhat3Words(data) {
         var endPos = new google.maps.LatLng( line["end"]["lat"], line["end"]["lng"]);
 
         console.log(line["start"]["lng"]);
-
-        //console.log(startPos)
-        //console.log(endPos)
 
         var path = new google.maps.Polyline({
             path: [
@@ -117,14 +113,14 @@ function doAsyncCall(url){
 
 function processIncomingData(data) {
     console.log("incoming data");
-    console.log(status);
 
-    //status.setRequestDeviceCount(data['count']);
-    //status.setSequestTimeDB(data['time']);
+    document.getElementById("statusRequestDeviceCount").innerHTML = data['count'];
+    document.getElementById("statusRequestTimeDB").innerHTML = data['time'];
+
     data = data['result'];
     for (var i = 0; i < data.length; i++) {
         var device = new Device(data[i]);
-        this.devices.add(device);
+        devices.add(device);
     }
     updatemap();
 }

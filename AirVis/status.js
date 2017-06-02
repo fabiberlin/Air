@@ -4,35 +4,33 @@
 
 class Status{
 
-    setDeviceCount(value) {
-        console.log("update deviceCount "+value);
-        this.statusDeviceCount.innerHTML = value;
-    }
-    setLocationCount(value) {
-        console.log("update locationCount "+value);
-        this.statusLocationCount.innerHTML = value;
-
-    }
-    setRequestDeviceCount(value) {
-        console.log("update requestDeviceCount "+value);
-        this.statusRequestDeviceCount.innerHTML = value;
-
-    }
-    setSequestTimeDB(value) {
-        console.log("update requestTimeDB "+value);
-        this.statusRequestTimeDB.innerHTML = value;
-    }
-
     constructor(){
         this.statusDeviceCount = document.getElementById("statusDeviceCount");
         this.statusLocationCount = document.getElementById("statusLocationCount");
         this.statusRequestDeviceCount = document.getElementById("statusRequestDeviceCount");
         this.statusRequestTimeDB = document.getElementById("statusRequestTimeDB");
 
-        // fucking slow - improve on server
-        //this.makeStartupCall();
-    }
+        this.makeStartupCall();
+    };
 
+    setDeviceCount(v) {
+        console.log("update deviceCount "+v);
+        this.statusDeviceCount.innerHTML = v;
+    };
+    setLocationCount(v) {
+        console.log("update locationCount "+v);
+        this.statusLocationCount.innerHTML = v;
+
+    };
+    setRequestDeviceCount(v) {
+        console.log("update requestDeviceCount "+v);
+        this.statusRequestDeviceCount.innerHTML = v;
+
+    };
+    setSequestTimeDB(v) {
+        console.log("update requestTimeDB "+v);
+        this.statusRequestTimeDB.innerHTML = v;
+    };
 
     makeStartupCall() {
         var that = this;
@@ -44,12 +42,17 @@ class Status{
                 xhr.setRequestHeader('Authorization', make_base_auth(USER, KEY));
             },
             success: function (data) {
+                console.log(data);
                 that.setDeviceCount(data['devices']);
                 that.setLocationCount(data['locations']);
                 that.setSequestTimeDB(data['time']);
             }
 
         });
-    }
+    };
+
+    toString(){
+        return "I'm a status";
+    };
 
 }

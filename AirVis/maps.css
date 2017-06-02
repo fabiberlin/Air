@@ -1,4 +1,9 @@
-html, body { height: 100%; margin: 0; padding: 0; }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #map {
     height: 100%;
 }
@@ -8,15 +13,19 @@ html, body { height: 100%; margin: 0; padding: 0; }
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    overflow: hidden; /* will contain if #first is longer than #second */
+    overflow: hidden;
 }
-#first {
+#left {
     width: 400px;
     background-color: #ffffff;
-    float:left; /* add this */
+    float:left;
 }
-#second {
+#right {
     background-color: #ffffff;
     height: 100%;
-    overflow: hidden; /* if you don't want #second to wrap below #first */
+    overflow: hidden;
+}
+
+.filter {
+    padding: 10px;
 }
