@@ -4,26 +4,26 @@ Air is a system for WLAN based positioning. It consists of an Android app for sn
 
 #### Screenshots
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Home_List.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Home_List.resized.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Home_Map.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Home_Map.resized.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Detail_List.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Detail_List.resized.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Detail_Map.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Detail_Map.resized.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Home_Map_Cycle.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Home_Map_Cycle.resized.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Notification.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Notification.resized.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Lockscreen.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirSniffer_Lockscreen.resized.png?raw=true)
 
 ![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirPI_Request.png?raw=true)
 
 ![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirVis.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirLocator_Single_Pos.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirLocator_Single_Pos.resized.png?raw=true)
 
-![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirLocator_Multi_Pos.png?raw=true)
+![Screenshot](https://github.com/fabiberlin/Air/blob/master/Docu/pics/screenshots/AirLocator_Multi_Pos.resized.png?raw=true)
 
 Icons from https://icons8.com/
