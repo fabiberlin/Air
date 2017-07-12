@@ -10,7 +10,7 @@ class Status{
         this.statusRequestDeviceCount = document.getElementById("statusRequestDeviceCount");
         this.statusRequestTimeDB = document.getElementById("statusRequestTimeDB");
 
-        this.makeStartupCall();
+        //this.makeStartupCall();
     };
 
     setDeviceCount(v) {
